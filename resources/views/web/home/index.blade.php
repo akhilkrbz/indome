@@ -6,9 +6,9 @@
     <div class="layerslider" style="width:100%;height:550px;">
         <div class="ls-slide" data-ls="transition2d: all;">
             <!--slide image-->
-            <img src="images/slide_04.jpg" alt="" class="ls-bg">
+            <img src="{{ asset('web/images/sliders/slide3.jpg') }}" alt="" class="ls-bg">
             <!--slide thumbnail-->
-            <img src="images/slide_04.jpg" alt="" class="ls-tn">
+            <img src="{{ asset('web/images/sliders/slide3.jpg') }}" alt="" class="ls-tn">
             <!--slide layers-->
             <p class="ls-l color_white fw_light tt_uppercase" style="left:0px;top:115px;font-size:1.285em;"
                 data-ls="offsetxin:-100;delayin:400;easingin:easeOutBack;durationin:700;">Shapes, Sizes And Styles</p>
@@ -22,9 +22,9 @@
         </div>
         <div class="ls-slide" data-ls="transition2d: all;">
             <!--slide image-->
-            <img src="images/slide_01.jpg" alt="" class="ls-bg">
+            <img src="{{ asset('web/images/sliders/slide4.jpg') }}" alt="" class="ls-bg">
             <!--slide thumbnail-->
-            <img src="images/slide_01.jpg" alt="" class="ls-tn">
+            <img src="{{ asset('web/images/sliders/slide4.jpg') }}" alt="" class="ls-tn">
             <!--slide layers-->
             <div class="ls-l circle bg_scheme_color color_white slider_label vc_child t_align_c"
                 style="left:207px; top:50px;"
@@ -47,9 +47,9 @@
         </div>
         <div class="ls-slide" data-ls="transition2d: all;">
             <!--slide image-->
-            <img src="images/slide_02.jpg" alt="" class="ls-bg">
+            <img src="{{ asset('web/images/sliders/slide2.jpg') }}" alt="" class="ls-bg">
             <!--slide thumbnail-->
-            <img src="images/slide_02.jpg" alt="" class="ls-tn">
+            <img src="{{ asset('web/images/sliders/slide2.jpg') }}" alt="" class="ls-tn">
             <!--slide layers-->
             <p class="ls-l color_white fw_light tt_uppercase" style="left:50%;top:171px;font-size:1.285em;"
                 data-ls="offsetxin:0; offsetyin:120; delayin:400;easingin:easeOutBack;durationin:700;">BATHROOM INSPIRATION
@@ -70,7 +70,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <!--banner-->
                     <figure class="relative wrapper scale_image_container m_bottom_30 r_image_container">
-                        <img src="images/home_img_1.jpg" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/home_img_1.jpg') }}" alt="" class="tr_all scale_image">
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
@@ -99,7 +99,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <!--banner-->
                     <figure class="relative wrapper scale_image_container r_image_container m_xs_bottom_30">
-                        <img src="images/home_img_2.jpg" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/home_img_2.jpg') }}" alt="" class="tr_all scale_image">
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
@@ -131,7 +131,7 @@
                     </div>
                     <!--banner-->
                     <figure class="relative wrapper scale_image_container r_image_container">
-                        <img src="images/home_img_3.jpg" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/home_img_3.jpg') }}" alt="" class="tr_all scale_image">
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
@@ -189,8 +189,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_3.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_3.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
@@ -266,8 +266,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_v3_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div class="product_buttons_container bg_white tr_all">
                                                 <div class="row">
@@ -343,8 +343,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_6.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_6.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_scheme_color t_align_c vc_child tt_uppercase">
@@ -419,8 +419,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_7.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_6.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_7.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_6.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_grey t_align_c vc_child tt_uppercase lh_small">
@@ -503,8 +503,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_3.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_3.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
@@ -580,8 +580,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_v3_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div class="product_buttons_container bg_white tr_all">
                                                 <div class="row">
@@ -657,8 +657,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_6.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_6.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_scheme_color t_align_c vc_child tt_uppercase">
@@ -741,8 +741,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_3.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_3.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
@@ -818,8 +818,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_v3_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div class="product_buttons_container bg_white tr_all">
                                                 <div class="row">
@@ -895,8 +895,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_6.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_6.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_scheme_color t_align_c vc_child tt_uppercase">
@@ -971,8 +971,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_7.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_6.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_7.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_6.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_grey t_align_c vc_child tt_uppercase lh_small">
@@ -1055,8 +1055,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_3.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_3.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
@@ -1132,8 +1132,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_v3_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div class="product_buttons_container bg_white tr_all">
                                                 <div class="row">
@@ -1209,8 +1209,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_6.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_6.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_scheme_color t_align_c vc_child tt_uppercase">
@@ -1285,8 +1285,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_7.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_6.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_7.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_6.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_grey t_align_c vc_child tt_uppercase lh_small">
@@ -1369,8 +1369,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_3.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_3.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
@@ -1446,8 +1446,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_v3_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div class="product_buttons_container bg_white tr_all">
                                                 <div class="row">
@@ -1523,8 +1523,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_6.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_6.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_scheme_color t_align_c vc_child tt_uppercase">
@@ -1599,8 +1599,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_7.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_6.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_7.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_6.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_grey t_align_c vc_child tt_uppercase lh_small">
@@ -1683,8 +1683,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_3.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_3.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
@@ -1760,8 +1760,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_v3_img_4.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_4.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div class="product_buttons_container bg_white tr_all">
                                                 <div class="row">
@@ -1837,8 +1837,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_6.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_5.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_6.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_5.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_scheme_color t_align_c vc_child tt_uppercase">
@@ -1913,8 +1913,8 @@
                                         <!--image & buttons & label-->
                                         <div class="relative">
                                             <a href="#" class="d_block">
-                                                <img src="images/home_img_7.jpg" alt="" class="c_image_1 tr_all">
-                                                <img src="images/home_v3_img_6.jpg" alt="" class="c_image_2 tr_all">
+                                                <img src="{{ asset('web/images/home_img_7.jpg') }}" alt="" class="c_image_1 tr_all">
+                                                <img src="{{ asset('web/images/home_v3_img_6.jpg') }}" alt="" class="c_image_2 tr_all">
                                             </a>
                                             <div
                                                 class="product_label fs_ex_small circle color_white bg_grey t_align_c vc_child tt_uppercase lh_small">
@@ -2036,62 +2036,62 @@
                                     }'>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="200">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_1.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_1.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="350">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_2.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_2.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="500">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_3.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_3.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="650">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_4.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_4.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="800">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_5.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_5.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="950">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_6.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_6.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1100">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_1.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_1.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1250">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_2.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_2.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1400">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_3.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_3.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1550">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_4.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_4.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1700">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_5.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_5.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1850">
                         <a href="#" class="d_block frame_container">
-                            <img src="images/client_img_6.jpg" alt="">
+                            <img src="{{ asset('web/images/client_img_6.jpg') }}" alt="">
                         </a>
                     </div>
                 </div>
@@ -2134,7 +2134,7 @@
                 <!--item-->
                 <figure class="animated hidden" data-animation="fadeInLeft" data-animation-delay="200">
                     <a href="#" class="d_block scale_image_container f_left m_right_20 photoframe wrapper color_white">
-                        <img src="images/customer_img_1.jpg" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/customer_img_1.jpg') }}" alt="" class="tr_all scale_image">
                     </a>
                     <figcaption>
                         <blockquote class="fw_light fs_large color_dark lh_medium m_bottom_15">
@@ -2155,7 +2155,7 @@
                 <!--item-->
                 <figure class="animated hidden" data-animation="fadeInLeft" data-animation-delay="350">
                     <a href="#" class="d_block scale_image_container f_left m_right_20 photoframe wrapper color_white">
-                        <img src="images/customer_img_2.jpg" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/customer_img_2.jpg') }}" alt="" class="tr_all scale_image">
                     </a>
                     <figcaption>
                         <blockquote class="fw_light fs_large color_dark lh_medium m_bottom_15">
@@ -2176,7 +2176,7 @@
                 <!--item-->
                 <figure class="animated hidden" data-animation="fadeInLeft" data-animation-delay="500">
                     <a href="#" class="d_block scale_image_container f_left m_right_20 photoframe wrapper color_white">
-                        <img src="images/customer_img_1.jpg" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/customer_img_1.jpg') }}" alt="" class="tr_all scale_image">
                     </a>
                     <figcaption>
                         <blockquote class="fw_light fs_large color_dark lh_medium m_bottom_15">
@@ -2197,7 +2197,7 @@
                 <!--item-->
                 <figure class="animated hidden" data-animation="fadeInLeft" data-animation-delay="750">
                     <a href="#" class="d_block scale_image_container f_left m_right_20 photoframe wrapper color_white">
-                        <img src="images/customer_img_2.jpg" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/customer_img_2.jpg') }}" alt="" class="tr_all scale_image">
                     </a>
                     <figcaption>
                         <blockquote class="fw_light fs_large color_dark lh_medium m_bottom_15">
@@ -2258,7 +2258,7 @@
                     <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="200">
                         <article class="frame_container scale_image_container">
                             <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_1.jpg" alt=""
+                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_1.jpg') }}" alt=""
                                         class="tr_all scale_image"></a>
                                 <figcaption>
                                     <div class="clearfix">
@@ -2289,7 +2289,7 @@
                     <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="350">
                         <article class="frame_container scale_image_container">
                             <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_2.jpg" alt=""
+                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_2.jpg') }}" alt=""
                                         class="tr_all scale_image"></a>
                                 <figcaption>
                                     <div class="clearfix">
@@ -2320,7 +2320,7 @@
                     <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="500">
                         <article class="frame_container scale_image_container">
                             <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_3.jpg" alt=""
+                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_3.jpg') }}" alt=""
                                         class="tr_all scale_image"></a>
                                 <figcaption>
                                     <div class="clearfix">
@@ -2351,7 +2351,7 @@
                     <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="650">
                         <article class="frame_container scale_image_container">
                             <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_1.jpg" alt=""
+                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_1.jpg') }}" alt=""
                                         class="tr_all scale_image"></a>
                                 <figcaption>
                                     <div class="clearfix">
@@ -2382,7 +2382,7 @@
                     <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="800">
                         <article class="frame_container scale_image_container">
                             <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_2.jpg" alt=""
+                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_2.jpg') }}" alt=""
                                         class="tr_all scale_image"></a>
                                 <figcaption>
                                     <div class="clearfix">
@@ -2413,7 +2413,7 @@
                     <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="950">
                         <article class="frame_container scale_image_container">
                             <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="images/blog_img_3.jpg" alt=""
+                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_3.jpg') }}" alt=""
                                         class="tr_all scale_image"></a>
                                 <figcaption>
                                     <div class="clearfix">

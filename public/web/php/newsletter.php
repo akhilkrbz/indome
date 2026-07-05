@@ -4,11 +4,11 @@
 $to = '';
 
 /* Subject */
-$subject = 'CosyOne Newsletter Form';
+$subject = 'Indome Furnitures Newsletter Form';
 
 /* Headers */
-$headers = 'From: CosyOne' . "\r\n" .
-    'Reply-To: cosyone@cosyone.com' . "\r\n";
+$headers = 'From: Indome Furnitures' . "\r\n" .
+    'Reply-To: indome@indome.com' . "\r\n";
 
 $email = $_POST['newsletter-email'];
 $name = $_POST['newsletter-name'];

@@ -39,7 +39,7 @@
 		<button class="back_to_top animated button_type_6 grey state_2 d_block black_hover f_left vc_child tr_all"><i class="fa fa-angle-up d_inline_m"></i></button>
 		<button data-popup="#subscribe_popup" data-popup-transition-in="bounceInUp" data-popup-transition-out="bounceOutUp"></button>
 		<!--popup-->
-		<div class="init_popup" id="subscribe_popup">
+		<div class="init_popup d-none" id="subscribe_popup">
 			<div class="popup init banner_type_2 color_lbrown">
 				<section class="bg_lbrown inner color_white">
 					<h2 class="second_font color_white fw_light m_bottom_27 t_align_c">Subscribe Now to Get 20% Off on Any Product!</h2>

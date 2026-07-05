@@ -19,7 +19,7 @@
 						<div class="menu-title">Dashboard</div>
 					</a>
 					<ul>
-						<li> <a href="index.html"><i class='bx bx-radio-circle'></i>Default</a>
+						<li> <a href="/"><i class='bx bx-radio-circle'></i>Default</a>
 						</li>
 						<li> <a href="index2.html"><i class='bx bx-radio-circle'></i>Alternate</a>
 						</li>
@@ -329,7 +329,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="https://codervent.com/rocker/documentation/index.html" target="_blank">
+					<a href="https://codervent.com/rocker/documentation//" target="_blank">
 						<div class="parent-icon"><i class="bx bx-folder"></i>
 						</div>
 						<div class="menu-title">Documentation</div>

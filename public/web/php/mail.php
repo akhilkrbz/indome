@@ -2,7 +2,7 @@
 	
 	// your email
 	$user_email = "";
-	$subject = "Mail from CosyOne";
+	$subject = "Mail from Indome Furnitures";
 
 	$mail = array(
 		"name" => htmlspecialchars($_POST['cf_name']),

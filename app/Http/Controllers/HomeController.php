@@ -13,4 +13,12 @@ class HomeController extends Controller
 
         return view('web/home/index');
     }
+
+    public function contact()
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'Contact Us');
+
+        return view('web/home/contact');
+    }
 }

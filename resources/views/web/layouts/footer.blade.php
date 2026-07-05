@@ -15,13 +15,13 @@
                     <!--social buttons-->
                     <ul class="hr_list">
                         <li class="m_right_3 m_bottom_3">
-                            <a href="#"
+                            <a href="https://www.facebook.com/IndoMeFurnitures/" target="_blank"
                                 class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
                                     class="fa fa-facebook fs_large d_inline_m"></i><span
                                     class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
                                     data-hide="fadeOutUp">Facebook</span></a>
                         </li>
-                        <li class="m_right_3 m_bottom_3">
+                        <!-- <li class="m_right_3 m_bottom_3">
                             <a href="#"
                                 class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
                                     class="fa fa-twitter fs_large d_inline_m"></i><span
@@ -48,15 +48,16 @@
                                     class="fa fa-pinterest fs_large d_inline_m"></i><span
                                     class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
                                     data-hide="fadeOutUp">Pinterest</span></a>
-                        </li>
+                        </li> -->
                         <li class="m_right_3 m_bottom_3">
-                            <a href="#"
+                            <a href="https://www.instagram.com/indomefurnitures?igsh=MW5hbnBuNTk3Z293cg=="
+                                target="_blank"
                                 class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
                                     class="fa fa-instagram fs_large d_inline_m"></i><span
                                     class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
                                     data-hide="fadeOutUp">Instagram</span></a>
                         </li>
-                        <li class="m_right_3 m_bottom_3">
+                        <!-- <li class="m_right_3 m_bottom_3">
                             <a href="#"
                                 class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
                                     class="fa fa-linkedin fs_large d_inline_m"></i><span
@@ -83,9 +84,9 @@
                                     class="fa fa-flickr fs_large d_inline_m"></i><span
                                     class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
                                     data-hide="fadeOutUp">Flickr</span></a>
-                        </li>
+                        </li> -->
                         <li class="m_right_3 m_bottom_3">
-                            <a href="#"
+                            <a href="{{ route('contact-us') }}"
                                 class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
                                     class="fa fa-envelope fs_large d_inline_m"></i><span
                                     class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
@@ -104,7 +105,8 @@
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">About Us</h5>
                         <hr class="divider_bg m_bottom_25">
                         <div class="clearfix">
-                            <img src="images/mini_logo.jpg" class="f_left m_top_10 m_right_20" alt="">
+                            <img src="{{ asset('web/images/mini_logo.jpg') }}" class="f_left m_top_10 m_right_20"
+                                alt="">
                             <p class="m_bottom_14 fw_light">Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut
                                 tellus dolor, dapibus eget, elementum vel, cursus.</p>
                             <p class="m_bottom_10 fw_light">Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac
@@ -156,9 +158,15 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Like Us On Facebook</h5>
                         <hr class="divider_bg m_bottom_15">
+
+
                         <iframe
-                            src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fthemeforest&amp;width=235&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=438889712801266"
-                            style="border:none; overflow:hidden; width:235px; height:258px;"></iframe>
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIndomeFurnitures&tabs=timeline&width=235&height=258&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                            width="235" height="258" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+
                     </div>
                 </div>
             </div>
@@ -167,15 +175,15 @@
         <div class="d_table w_full d_xs_block t_xs_align_c">
             <div
                 class="col-lg-6 col-md-6 col-sm-6 color_light fw_light f_none d_table_cell v_align_m d_xs_block m_xs_bottom_10">
-                &copy; 2014 <a href="index.html" class="sc_hover">CosyOne</a>. All Rights Reserved.
+                &copy; {{ date('Y') }} <a href="/" class="sc_hover">Indome Furnitures</a>. All Rights Reserved.
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c f_none d_table_cell v_align_m d_xs_block">
                 <ul class="hr_list d_inline_b">
-                    <li class="m_right_5"><img src="images/payment_1.jpg" alt=""></li>
-                    <li class="m_right_5"><img src="images/payment_2.jpg" alt=""></li>
-                    <li class="m_right_5"><img src="images/payment_3.jpg" alt=""></li>
-                    <li class="m_right_5"><img src="images/payment_4.jpg" alt=""></li>
-                    <li class="m_right_5"><img src="images/payment_5.jpg" alt=""></li>
+                    <li class="m_right_5"><img src="{{ asset('web/images/payment_1.jpg') }}" alt=""></li>
+                    <li class="m_right_5"><img src="{{ asset('web/images/payment_2.jpg') }}" alt=""></li>
+                    <li class="m_right_5"><img src="{{ asset('web/images/payment_3.jpg') }}" alt=""></li>
+                    <li class="m_right_5"><img src="{{ asset('web/images/payment_4.jpg') }}" alt=""></li>
+                    <li class="m_right_5"><img src="{{ asset('web/images/payment_5.jpg') }}" alt=""></li>
                 </ul>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <head>
-    <title>{{ session('main_page') }} - {{ session('sub_page') }}</title>
+    <title>{{ (session('main_page')) ? session('main_page') .' - '. session('sub_page') : 'Indome Furnitures' }}</title>
     <meta charset="utf-8">
     <!--add responsive layout support-->
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -31,4 +31,9 @@
 		<![endif]-->
     <script src="{{ asset('web/js/jquery-2.1.1.min.js') }}"></script>
     <script src="{{ asset('web/js/modernizr.js') }}"></script>
+    <style>
+        .d-none {
+            display: none !important;
+        }
+    </style>
 </head>
