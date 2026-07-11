@@ -104,7 +104,7 @@
                     <nav role="navigation" class="d_xs_none">
                         <ul class="main_menu relative hr_list second_font fs_medium">
                             <li class="current"><a href="/" class="tt_uppercase tr_delay">Home </a></li>
-                            <li><a href="about.html" class="tt_uppercase tr_delay">About</a></li>
+                            <li><a href="{{ route('about-us') }}" class="tt_uppercase tr_delay">About</a></li>
                             <li><a href="contact.html" class="tt_uppercase tr_delay">Products</a></li>
                             <li><a href="{{ route('contact-us') }}" class="tt_uppercase tr_delay">Contact</a></li>
                         </ul>

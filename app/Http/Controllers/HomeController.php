@@ -45,4 +45,20 @@ class HomeController extends Controller
 
         return redirect()->route('contact-us')->with('success', 'Your message has been sent successfully! Our Team will contact you soon.');
     }
+
+    public function aboutUs()
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'About Us');
+
+        return view('web/home/about-us');
+    }
+
+    public function products()
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'Products');
+
+        return view('web/products/list');
+    }
 }

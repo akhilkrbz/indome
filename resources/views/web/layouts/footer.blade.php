@@ -105,14 +105,14 @@
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">About Us</h5>
                         <hr class="divider_bg m_bottom_25">
                         <div class="clearfix">
-                            <img src="{{ asset('web/images/mini_logo.jpg') }}" class="f_left m_top_10 m_right_20"
+                            <img src="{{ asset('web/images/logo.png') }}" class="f_left m_top_10 m_right_20"
                                 alt="">
                             <p class="m_bottom_14 fw_light">Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut
                                 tellus dolor, dapibus eget, elementum vel, cursus.</p>
                             <p class="m_bottom_10 fw_light">Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac
                                 turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque.
                             </p>
-                            <a href="#" class="sc_hover second_font">Read More</a>
+                            <a href="{{ route('about-us') }}" class="sc_hover second_font">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">

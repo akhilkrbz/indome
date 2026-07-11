@@ -8,7 +8,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <!--include favicon-->
-    <link rel="shortcut icon" type="image/x-icon" href="images/fav.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('web/images/favicon.png') }}">
     <!--fonts include-->
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
     <link
