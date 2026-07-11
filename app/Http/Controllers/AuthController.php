@@ -38,6 +38,20 @@ class AuthController extends Controller
 
     public function dashboard()
     {
+        session()->put('main_page', 'Indome Furnitures Dashboard');
+        session()->put('sub_page', '');
+
         return view('admin.dashboard');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
     }
 }

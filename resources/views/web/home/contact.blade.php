@@ -147,40 +147,47 @@
                             <hr class="divider_bg m_bottom_25">
                             <p class="second_font m_bottom_14">Send an email. All fields with an <span
                                     class="color_red">*</span> are required.</p>
-                            <form id="contactform" class="b_default_layout">
+
+                            @include('web.layouts.alerts')
+
+                            
+                            <form id="contactUsform" class="b_default_layout" method="post" action="{{ route('contact.store') }}">
+                                @csrf
                                 <ul>
                                     <li class="row">
                                         <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_15">
                                             <label class="second_font required d_inline_b m_bottom_5 clickable"
                                                 for="cf_name">First Name</label><br>
-                                            <input type="text" name="cf_name" id="cf_name" class="tr_all w_full fw_light">
+                                            <input type="text" name="name" id="cf_name" class="tr_all w_full fw_light" required>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_15">
                                             <label class="second_font required d_inline_b m_bottom_5 clickable"
                                                 for="cf_email">Email Address</label><br>
-                                            <input type="email" name="cf_email" id="cf_email"
-                                                class="tr_all w_full fw_light">
+                                            <input type="email" name="email" id="cf_email"
+                                                class="tr_all w_full fw_light" required>
                                         </div>
                                     </li>
                                     <li class="m_bottom_15">
                                         <label class="second_font d_inline_b m_bottom_5 clickable"
                                             for="cf_telephone">Telephone</label><br>
-                                        <input type="text" name="cf_telephone" id="cf_telephone"
-                                            class="tr_all w_full fw_light">
+                                        <input type="text" name="phone" id="cf_telephone"
+                                            class="tr_all w_full fw_light" required>
                                     </li>
                                     <li class="m_bottom_5">
                                         <label class="second_font d_inline_b m_bottom_5 clickable"
                                             for="cf_message">Message</label><br>
-                                        <textarea id="cf_message" name="cf_message" rows="6"
-                                            class="tr_all w_full fw_light"></textarea>
+                                        <textarea id="cf_message" name="message" rows="6"
+                                            class="tr_all w_full fw_light" required></textarea>
                                     </li>
                                     <li>
-                                        <button
+                                        <button type="submit"
                                             class="button_type_2 black state_2 tr_all second_font fs_medium tt_uppercase d_inline_b"><span
                                                 class="m_left_10 m_right_10 d_inline_b">Submit</span></button>
                                     </li>
                                 </ul>
                             </form>
+
+
                         </section>
                     </div>
                 </div>
