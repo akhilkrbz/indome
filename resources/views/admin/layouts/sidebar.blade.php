@@ -12,7 +12,7 @@
 			 </div>
 			<!--navigation-->
 			<ul class="metismenu" id="menu">
-				<li>
+				<li class="{{ (request()->route()->getName() == 'dashboard') ? 'mm-active' : '' }}">
 					<a href="{{ route('dashboard') }}">
 						<div class="parent-icon"><i class='bx bx-home-alt'></i>
 						</div>
@@ -20,7 +20,7 @@
 					</a>
 				</li>
 
-				<li>
+				<li class="{{ (request()->route()->getName() == 'contacts.list') ? 'mm-active' : '' }}">
 					<a href="{{ route('contacts.list') }}">
 						<div class="parent-icon"><i class='bx bx-user'></i>
 						</div>
