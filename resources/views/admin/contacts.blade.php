@@ -7,8 +7,9 @@
         <div class="page-content">
             <!--breadcrumb-->
 
-
-            @include('admin.layouts.breadcrumb')
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                @include('admin.layouts.breadcrumb')
+            </div>
 
             <!--end breadcrumb-->
             <h6 class="mb-0 text-uppercase">{{ session('sub_page') }}</h6>
@@ -44,7 +45,8 @@
                                     </tr>
 
                                     <!-- Modal -->
-                                    <div class="modal fade" id="message_view_{{ $contact->id }}" tabindex="-1" aria-hidden="true">
+                                    <div class="modal fade" id="message_view_{{ $contact->id }}" tabindex="-1"
+                                        aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-scrollable">
                                             <div class="modal-content">
                                                 <div class="modal-header">
