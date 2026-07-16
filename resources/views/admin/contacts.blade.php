@@ -47,7 +47,7 @@
                                     <!-- Modal -->
                                     <div class="modal fade" id="message_view_{{ $contact->id }}" tabindex="-1"
                                         aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-dialog modal-lg modal-dialog-scrollable">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title">View Message</h5>
@@ -55,7 +55,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>{!! $contact->message !!}</p>
+                                                    <div class="message-box">{!! $contact->message !!}</div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"

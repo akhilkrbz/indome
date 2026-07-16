@@ -22,20 +22,20 @@
 
 				<li class="{{ (request()->route()->getName() == 'categories.list') ? 'mm-active' : '' }}">
 					<a href="{{ route('categories.list') }}">
-						<div class="parent-icon"><i class='bx bx-user'></i>
+						<div class="parent-icon"><i class='bx bx-menu-alt-left'></i>
 						</div>
 						<div class="menu-title">Categories</div>
 					</a>
 				</li>
 				
 
-				<li class="{{ (request()->route()->getName() == 'contacts.list') ? 'mm-active' : '' }}">
+				<!-- <li class="{{ (request()->route()->getName() == 'contacts.list') ? 'mm-active' : '' }}">
 					<a href="{{ route('contacts.list') }}">
 						<div class="parent-icon"><i class='bx bx-user'></i>
 						</div>
 						<div class="menu-title">Products</div>
 					</a>
-				</li>
+				</li> -->
 
 				<li class="{{ (request()->route()->getName() == 'contacts.list') ? 'mm-active' : '' }}">
 					<a href="{{ route('contacts.list') }}">
