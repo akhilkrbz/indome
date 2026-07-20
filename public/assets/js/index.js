@@ -1,10 +1,15 @@
 $(function() {
     "use strict";
 
-	
+    function getCanvasContext(id) {
+        var el = document.getElementById(id);
+        return el ? el.getContext('2d') : null;
+    }
+
 // chart 1
 
-  var ctx = document.getElementById("chart1").getContext('2d');
+  var ctx = getCanvasContext("chart1");
+  if (ctx) {
    
   var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#6078ea');  
@@ -57,30 +62,30 @@ $(function() {
 				  }
 			  }
       });
-	  
-	 
+      }
+ 
 // chart 2
 
- var ctx = document.getElementById("chart2").getContext('2d');
-
-  var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
+ var ctx2 = getCanvasContext("chart2");
+ if (ctx2) {
+  var gradientStroke1 = ctx2.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#fc4a1a');
       gradientStroke1.addColorStop(1, '#f7b733');
 
-  var gradientStroke2 = ctx.createLinearGradient(0, 0, 0, 300);
+  var gradientStroke2 = ctx2.createLinearGradient(0, 0, 0, 300);
       gradientStroke2.addColorStop(0, '#4776e6');
       gradientStroke2.addColorStop(1, '#8e54e9');
 
 
-  var gradientStroke3 = ctx.createLinearGradient(0, 0, 0, 300);
+  var gradientStroke3 = ctx2.createLinearGradient(0, 0, 0, 300);
       gradientStroke3.addColorStop(0, '#ee0979');
       gradientStroke3.addColorStop(1, '#ff6a00');
 	  
-	var gradientStroke4 = ctx.createLinearGradient(0, 0, 0, 300);
+	var gradientStroke4 = ctx2.createLinearGradient(0, 0, 0, 300);
       gradientStroke4.addColorStop(0, '#42e695');
       gradientStroke4.addColorStop(1, '#3bb2b8');
 
-      var myChart = new Chart(ctx, {
+      var myChart = new Chart(ctx2, {
         type: 'doughnut',
         data: {
           labels: ["Jeans", "T-Shirts", "Shoes", "Lingerie"],
@@ -112,8 +117,7 @@ $(function() {
           
        }
       });
-
-   
+ }
 
 // worl map
 
@@ -159,13 +163,13 @@ jQuery('#geographic-map-2').vectorMap(
 
 // chart 3
 
- var ctx = document.getElementById('chart3').getContext('2d');
-
-  var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
+ var ctx3 = getCanvasContext('chart3');
+ if (ctx3) {
+  var gradientStroke1 = ctx3.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#00b09b');
       gradientStroke1.addColorStop(1, '#96c93d');
 
-      var myChart = new Chart(ctx, {
+      var myChart = new Chart(ctx3, {
         type: 'line',
         data: {
           labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -175,11 +179,11 @@ jQuery('#geographic-map-2').vectorMap(
                 backgroundColor: [
                   gradientStroke1
                 ],
-				fill: {
-					target: 'origin',
-					above: 'rgb(21 202 32 / 15%)',   // Area will be red above the origin
-					//below: 'rgb(21 202 32 / 100%)'   // And blue below the origin
-				  }, 
+			fill: {
+				target: 'origin',
+				above: 'rgb(21 202 32 / 15%)',   // Area will be red above the origin
+				//below: 'rgb(21 202 32 / 100%)'   // And blue below the origin
+			  }, 
                 tension: 0.4,
                 borderColor: [
                   gradientStroke1
@@ -188,39 +192,38 @@ jQuery('#geographic-map-2').vectorMap(
             }]
         },
         options: {
-				  maintainAspectRatio: false,
-				  plugins: {
-					  legend: {
-						  display: false,
-					  }
-				  },
-				  scales: {
-					  y: {
-						  beginAtZero: true
-					  }
+			  maintainAspectRatio: false,
+			  plugins: {
+				  legend: {
+					  display: false,
+				  }
+			  },
+			  scales: {
+				  y: {
+					  beginAtZero: true
 				  }
 			  }
+		  }
       });
-
-
+ }
 
 // chart 4
 
-var ctx = document.getElementById("chart4").getContext('2d');
-
-  var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
+var ctx4 = getCanvasContext("chart4");
+if (ctx4) {
+  var gradientStroke1 = ctx4.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#ee0979');
       gradientStroke1.addColorStop(1, '#ff6a00');
     
-  var gradientStroke2 = ctx.createLinearGradient(0, 0, 0, 300);
+  var gradientStroke2 = ctx4.createLinearGradient(0, 0, 0, 300);
       gradientStroke2.addColorStop(0, '#283c86');
       gradientStroke2.addColorStop(1, '#39bd3c');
 
-  var gradientStroke3 = ctx.createLinearGradient(0, 0, 0, 300);
+  var gradientStroke3 = ctx4.createLinearGradient(0, 0, 0, 300);
       gradientStroke3.addColorStop(0, '#7f00ff');
       gradientStroke3.addColorStop(1, '#e100ff');
 
-      var myChart = new Chart(ctx, {
+      var myChart = new Chart(ctx4, {
         type: 'pie',
         data: {
           labels: ["Completed", "Pending", "Process"],
@@ -252,6 +255,7 @@ var ctx = document.getElementById("chart4").getContext('2d');
           
        }
       });
+}
 
 	  
 
@@ -259,7 +263,8 @@ var ctx = document.getElementById("chart4").getContext('2d');
 
   // chart 5
 
-    var ctx = document.getElementById("chart5").getContext('2d');
+    var ctx = getCanvasContext("chart5");
+    if (ctx) {
    
       var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#f54ea2');

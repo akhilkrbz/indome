@@ -1,8 +1,15 @@
 $(function() {
 	"use strict";
-	new PerfectScrollbar(".app-container"),
-	new PerfectScrollbar(".header-message-list"),
-	new PerfectScrollbar(".header-notifications-list"),
+	function initPerfectScrollbar(selector) {
+		var el = document.querySelector(selector);
+		if (el) {
+			new PerfectScrollbar(el);
+		}
+	}
+
+	initPerfectScrollbar(".app-container");
+	initPerfectScrollbar(".header-message-list");
+	initPerfectScrollbar(".header-notifications-list");
 
 
 	    $(".mobile-search-icon").on("click", function() {
