@@ -230,6 +230,8 @@
 	</div>
 	<!--end switcher-->
 	@include('admin.layouts.footer')
+
+	@yield('scripts')
 </body>
 
 </html>

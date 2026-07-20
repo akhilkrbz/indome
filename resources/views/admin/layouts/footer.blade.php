@@ -11,6 +11,15 @@
 	<script src="assets/js/index.js"></script>
 	<!--app JS-->
 	<script src="assets/js/app.js"></script>
+
+	<script src="assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
 	<script>
 		new PerfectScrollbar(".app-container")
+	</script>
+
+	<script>
+		$(function () {
+			$('[data-bs-toggle="popover"]').popover();
+			$('[data-bs-toggle="tooltip"]').tooltip();
+		})
 	</script>

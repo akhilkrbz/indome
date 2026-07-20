@@ -29,13 +29,13 @@
 				</li>
 				
 
-				<!-- <li class="{{ (request()->route()->getName() == 'contacts.list') ? 'mm-active' : '' }}">
-					<a href="{{ route('contacts.list') }}">
-						<div class="parent-icon"><i class='bx bx-user'></i>
+				<li class="{{ (request()->route()->getName() == 'products.list') ? 'mm-active' : '' }}">
+					<a href="{{ route('products.list') }}">
+						<div class="parent-icon"><i class='bx bx-shopping-bag'></i>
 						</div>
 						<div class="menu-title">Products</div>
 					</a>
-				</li> -->
+				</li>
 
 				<li class="{{ (request()->route()->getName() == 'contacts.list') ? 'mm-active' : '' }}">
 					<a href="{{ route('contacts.list') }}">
