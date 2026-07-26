@@ -315,6 +315,29 @@ class Admin extends Controller
         return view('admin/products/images-list', compact('product', 'images'));
     }
 
+    public function productDetails($id)
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'Product Details');
+
+        $product = Product::find($id);
+        if (!$product) {
+            return redirect()->route('products.list')->with('error', 'Product not found.');
+        }
+
+        $images = DB::table('product_images')
+            ->where('product_id', $product->id)
+            ->orderByDesc('id')
+            ->get();
+
+        $variants = DB::table('product_variants')
+            ->where('product_id', $product->id)
+            ->orderByDesc('id')
+            ->get();
+
+        return view('admin/products/product-details', compact('product', 'images', 'variants'));
+    }
+
     public function productImageStore(Request $request, $id)
     {
         $request->validate([
