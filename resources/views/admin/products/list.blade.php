@@ -30,9 +30,9 @@
                             <div class="d-flex align-items-center mt-3 fs-6">
                                 <div class="cursor-pointer">
                                     <a href="{{ route('products.edit', $item->id) }}" class="btn btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Edit Product"><i class='bx bxs-edit text-warning'></i></a>
-                                    <button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Remove"><i class='bx bxs-trash text-danger'></i></button>
+                                    <!-- <button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Remove"><i class='bx bxs-trash text-danger'></i></button> -->
                                     <button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Add Images"><i class='bx bxs-image-add text-primary'></i></button>
-                                    <a href="{{ route('products.add.variants', $item->id) }}"><button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Add Variants"><i class='bx bxs-book-add text-dark'></i></button></a>
+                                    <!-- <a href="{{ route('products.add.variants', $item->id) }}"><button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Add Variants"><i class='bx bxs-book-add text-dark'></i></button></a> -->
                                     <a href="{{ route('products.variants.list', $item->id) }}"><button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="View Variants"><i class='bx bxs-package text-success'></i></button></a>
                                 </div>
                                 <!-- <p class="mb-0 ms-auto">4.2(182)</p> -->
