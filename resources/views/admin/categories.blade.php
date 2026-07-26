@@ -10,12 +10,7 @@
             <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
                 @include('admin.layouts.breadcrumb')
 
-                <div class="ms-auto">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#categoryModal"><i class="bx bx-plus"></i> New Category</button>
-                    </div>
-                </div>
+
             </div>
 
 
@@ -24,6 +19,12 @@
             <hr />
             <div class="card">
                 <div class="card-body">
+                    <div class="m-2">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#categoryModal"><i class="bx bx-plus"></i> New Category</button>
+                        </div>
+                    </div>
                     @include('admin.layouts.alerts')
                     <div class="table-responsive">
                         <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -114,10 +115,9 @@
                                                         <p>No subcategories found.</p>
                                                     @else
 
-                                                    @foreach($contact->sub_categories as $key => $subCategory)
-                                                        <span
-                                                            class="badge bg-dark m-2">{{ $subCategory->sub_category_name }}</span>
-                                                    @endforeach
+                                                        @foreach($contact->sub_categories as $key => $subCategory)
+                                                            <span class="badge bg-dark m-2">{{ $subCategory->sub_category_name }}</span>
+                                                        @endforeach
 
                                                     @endif
 
