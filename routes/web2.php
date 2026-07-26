@@ -19,9 +19,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/products-list', [Admin::class, 'productList'])->name('products.list');
     Route::get('/product-add', [Admin::class, 'productAdd'])->name('products.add');
     Route::post('/product-store', [Admin::class, 'productStore'])->name('products.store');
+    Route::get('/product-edit/{id}', [Admin::class, 'productEdit'])->name('products.edit');
+    Route::post('/product-update/{id}', [Admin::class, 'productUpdate'])->name('products.update');
     Route::get('/product-add-variants/{id}', [Admin::class, 'productAddVariants'])->name('products.add.variants');
     Route::post('/product-variant-store', [Admin::class, 'productVariantStore'])->name('products.variant.store');
     Route::get('/product-variants-list/{id}', [Admin::class, 'productVariantsList'])->name('products.variants.list');
+    Route::get('/variant-edit/{id}', [Admin::class, 'variantEdit'])->name('variants.edit');
+    Route::post('/variant-update/{id}', [Admin::class, 'variantUpdate'])->name('variants.update');
 
 });
 

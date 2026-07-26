@@ -44,7 +44,12 @@
                                 @forelse($variants as $variant)
                                     <tr>
                                         <td>{{ $loop->iteration + ($variants->currentPage() - 1) * $variants->perPage() }}</td>
-                                        <td>{{ $variant->variant_title ?? $variant->name ?? '-' }}</td>
+                                        <td>
+                                            {{ $variant->variant_title ?? $variant->name ?? '-' }}
+                                            <div class="mt-2">
+                                                <a href="{{ route('variants.edit', $variant->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                            </div>
+                                        </td>
                                         <td>{{ $variant->variant_code ?? '-' }}</td>
                                         <td>{{ $variant->price ?? '-' }}</td>
                                         <td>{{ $variant->offer_price ?? '-' }}</td>
