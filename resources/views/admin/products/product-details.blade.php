@@ -15,15 +15,15 @@
                             $mainImage = $images->first();
                         @endphp
                         @if($mainImage)
-                            <img src="{{ asset('uploads/products/' . $product->id . '/' . $mainImage->filename) }}" class="img-fluid" alt="{{ $product->name }}" style="width: 100%; max-height: 420px; object-fit: cover;">
+                            <img id="main-product-image" src="{{ asset('uploads/products/' . $product->id . '/' . $mainImage->filename) }}" class="img-fluid" alt="{{ $product->name }}" style="width: 100%; max-height: 420px; object-fit: cover;">
                         @else
-                            <img src="{{ asset('assets/images/products/01.png') }}" class="img-fluid" alt="{{ $product->name }}">
+                            <img id="main-product-image" src="{{ asset('assets/images/products/01.png') }}" class="img-fluid" alt="{{ $product->name }}">
                         @endif
 
                         <div class="row mb-3 row-cols-auto g-2 justify-content-center mt-3">
                             @foreach($images as $image)
                                 <div class="col">
-                                    <img src="{{ asset('uploads/products/' . $product->id . '/' . $image->filename) }}" width="70" class="border rounded cursor-pointer" alt="{{ $product->name }}" style="height: 70px; object-fit: cover;">
+                                    <img src="{{ asset('uploads/products/' . $product->id . '/' . $image->filename) }}" width="70" class="border rounded cursor-pointer thumbnail-image" alt="{{ $product->name }}" style="height: 70px; object-fit: cover;" data-full-image="{{ asset('uploads/products/' . $product->id . '/' . $image->filename) }}">
                                 </div>
                             @endforeach
                         </div>
@@ -90,4 +90,19 @@
         </div>
     </div>
 
+@endsection
+
+@section('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.thumbnail-image').forEach(function (thumb) {
+                thumb.addEventListener('click', function () {
+                    const mainImage = document.getElementById('main-product-image');
+                    if (mainImage) {
+                        mainImage.src = this.getAttribute('data-full-image');
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
