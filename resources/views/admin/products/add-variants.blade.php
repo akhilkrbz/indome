@@ -7,34 +7,117 @@
         <div class="page-content">
             <!--breadcrumb-->
 
+            <!--breadcrumb-->
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="breadcrumb-title pe-3">eCommerce</div>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0">
+                            <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Orders</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="ms-auto">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Settings</button>
+                        <button type="button" class="btn btn-primary split-bg-primary dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown"> <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"> <a class="dropdown-item"
+                                href="javascript:;">Action</a>
+                            <a class="dropdown-item" href="javascript:;">Another action</a>
+                            <a class="dropdown-item" href="javascript:;">Something else here</a>
+                            <div class="dropdown-divider"></div> <a class="dropdown-item" href="javascript:;">Separated
+                                link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end breadcrumb-->
+
             <div class="card">
                 <div class="card-body p-4">
-                    <h5 class="card-title">Add Product Details</h5>
+                    <h5 class="card-title">Add New Product</h5>
                     <hr />
                     @include('admin.layouts.alerts')
                     <div class="form-body mt-4">
-                        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('products.variant.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="border border-3 p-4 rounded">
+
+                                        <input type="hidden" name="product_id" value="{{ $product->id }}">
                                         
 
                                         <div class="mb-3">
-                                            <label for="inputProductTitle" class="form-label">Product Title</label>
+                                            <label for="inputProductTitle" class="form-label">Variant Title</label>
                                             <input type="text" name="name" class="form-control" id="name"
-                                                placeholder="Enter product title" value="{{ old('name') }}" required>
+                                                placeholder="Enter product title" value="{{ $product->name }}" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="inputProductCode" class="form-label">Product Code</label>
-                                            <input type="text" name="product_code" class="form-control" id="product_code"
-                                                placeholder="Enter product code" value="{{ old('product_code') }}" required>
+                                            <label for="inputProductCode" class="form-label">Variant Code</label>
+                                            <input type="text" name="variant_code" class="form-control" id="variant_code"
+                                                placeholder="Enter variant code" value="{{ old('variant_code') }}" required>
                                         </div>
+                                        
+
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="offer_price" class="form-label">Offer Price</label>
+                                                <input type="text" name="offer_price" class="form-control" id="offer_price"
+                                                    placeholder="Enter offer price" value="{{ old('offer_price') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="price" class="form-label">Price</label>
+                                                <input type="text" name="price" class="form-control" id="price"
+                                                    placeholder="Enter price" value="{{ old('price') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="size" class="form-label">Size</label>
+                                                <input type="text" name="size" class="form-control" id="size"
+                                                    placeholder="Enter size" value="{{ old('size') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="colour" class="form-label">Colour</label>
+                                                <input type="text" name="colour" class="form-control" id="colour"
+                                                    placeholder="Enter colour" value="{{ old('colour') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="material" class="form-label">Material</label>
+                                                <input type="text" name="material" class="form-control" id="material"
+                                                    placeholder="Enter material" value="{{ old('material') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="length" class="form-label">Length</label>
+                                                <input type="text" name="length" class="form-control" id="length"
+                                                    placeholder="Enter length" value="{{ old('length') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="height" class="form-label">Height</label>
+                                                <input type="text" name="height" class="form-control" id="height"
+                                                    placeholder="Enter height" value="{{ old('height') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="weight" class="form-label">Weight</label>
+                                                <input type="text" name="weight" class="form-control" id="weight"
+                                                    placeholder="Enter weight" value="{{ old('weight') }}">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="stock" class="form-label">Stock</label>
+                                                <input type="text" name="stock" class="form-control" id="stock"
+                                                    placeholder="Enter stock" value="{{ old('stock') }}">
+                                            </div>
+                                        </div>
+
                                         <div class="mb-3">
                                             <label for="inputProductDescription" class="form-label">Description</label>
                                             <textarea class="form-control" id="description" name="description"
                                                 rows="3">{{ old('description') }}</textarea>
                                         </div>
+
                                         <!-- <div class="mb-3">
                                                         <label for="inputProductDescription" class="form-label">Product Images</label>
                                                         <input id="image-uploadify" type="file"
@@ -42,7 +125,7 @@
                                                             multiple>
                                                     </div> -->
 
-                                        <div class="col-3">
+                                        <div class="col-3 mt-3">
                                             <div class="d-grid">
                                                 <button type="submit" class="btn btn-primary">Save Product</button>
                                             </div>
@@ -130,7 +213,7 @@
 
     <script>
         $(document).ready(function () {
-            
+            $('#image-uploadify').imageuploadify();
         })
     </script>
 

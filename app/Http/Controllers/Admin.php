@@ -135,11 +135,72 @@ class Admin extends Controller
         session()->put('main_page', 'Indome Furnitures ');
         session()->put('sub_page', 'Add Product Variants');
 
-        $product = Product::findOrFail($id);
+        $product = Product::find($id);
         if (!$product) {
             return redirect()->route('products.list')->with('error', 'Product not found.');
         }
 
         return view('admin/products/add-variants', compact('product'));
+    }
+
+    public function productVariantStore(Request $request)
+    {
+        $request->validate([
+            'product_id'    => 'required|exists:products,id',
+            'name'          => 'required|string|max:255',
+            'variant_code'  => 'required|string|max:255|unique:product_variants,variant_code',
+            'description'   => 'nullable|string',
+            'offer_price'   => 'nullable|string|max:20',
+            'price'         => 'nullable|string|max:20',
+            'size'          => 'nullable|string|max:255',
+            'colour'        => 'nullable|string|max:255',
+            'material'      => 'nullable|string|max:255',
+            'length'        => 'nullable|string|max:255',
+            'height'        => 'nullable|string|max:255',
+            'weight'        => 'nullable|string|max:255',
+            'stock'         => 'nullable|string|max:20',
+        ]);
+
+        $data = [
+            'product_id'    => $request->input('product_id'),
+            'variant_title'  => $request->input('name'),
+            'variant_code'  => $request->input('variant_code'),
+            'description'   => $request->input('description'),
+            'offer_price'   => $request->input('offer_price'),
+            'price'         => $request->input('price'),
+            'size'          => $request->input('size'),
+            'colour'        => $request->input('colour'),
+            'material'      => $request->input('material'),
+            'length'        => $request->input('length'),
+            'height'        => $request->input('height'),
+            'weight'        => $request->input('weight'),
+            'stock'         => $request->input('stock'),
+            'created_at'    => now(),
+            'updated_at'    => now(),
+            'created_by'    => auth()->user()->id,
+            'updated_by'    => auth()->user()->id
+        ];
+
+        DB::table('product_variants')->insert($data);
+
+        return redirect()->route('products.list')->with('success', 'Product variant added successfully.');
+    }
+
+    public function productVariantsList($id)
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'Product Variants');
+
+        $product = Product::find($id);
+        if (!$product) {
+            return redirect()->route('products.list')->with('error', 'Product not found.');
+        }
+
+        $variants = DB::table('product_variants')
+            ->where('product_id', $product->id)
+            ->orderByDesc('id')
+            ->paginate(10);
+
+        return view('admin/products/variants-list', compact('product', 'variants'));
     }
 }
