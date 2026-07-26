@@ -26,6 +26,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/product-variants-list/{id}', [Admin::class, 'productVariantsList'])->name('products.variants.list');
     Route::get('/variant-edit/{id}', [Admin::class, 'variantEdit'])->name('variants.edit');
     Route::post('/variant-update/{id}', [Admin::class, 'variantUpdate'])->name('variants.update');
+    Route::get('/product-images-list/{id}', [Admin::class, 'productImagesList'])->name('products.images.list');
+    Route::post('/product-image-store/{id}', [Admin::class, 'productImageStore'])->name('products.image.store');
 
 });
 

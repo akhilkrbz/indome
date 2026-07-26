@@ -296,4 +296,53 @@ class Admin extends Controller
 
         return redirect()->route('products.variants.list', $request->input('product_id'))->with('success', 'Variant updated successfully.');
     }
+
+    public function productImagesList($id)
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'Product Images');
+
+        $product = Product::find($id);
+        if (!$product) {
+            return redirect()->route('products.list')->with('error', 'Product not found.');
+        }
+
+        $images = DB::table('product_images')
+            ->where('product_id', $product->id)
+            ->orderByDesc('id')
+            ->paginate(10);
+
+        return view('admin/products/images-list', compact('product', 'images'));
+    }
+
+    public function productImageStore(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+        ]);
+
+        $product = Product::find($id);
+        if (!$product) {
+            return redirect()->route('products.list')->with('error', 'Product not found.');
+        }
+
+        $file = $request->file('image');
+        $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        $destinationPath = public_path('uploads/products/' . $id);
+
+        if (!is_dir($destinationPath)) {
+            mkdir($destinationPath, 0755, true);
+        }
+
+        $file->move($destinationPath, $filename);
+
+        DB::table('product_images')->insert([
+            'product_id' => $product->id,
+            'filename' => $filename,
+            'created_at' => now(),
+            'created_by' => auth()->user()->id,
+        ]);
+
+        return redirect()->route('products.images.list', $product->id)->with('success', 'Image uploaded successfully.');
+    }
 }
