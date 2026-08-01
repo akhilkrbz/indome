@@ -73,10 +73,10 @@
                                         
                                     </div>
 
-                                    <button data-popup="#add_to_cart_popup" data-popup-transition-in="bounceInUp"
-                                        data-popup-transition-out="bounceOutUp"
+                                    <a href="{{ route('view-product.details', $item->id) }}"><button
                                         class="button_type_2 m_bottom_9 d_block w_full t_align_c lbrown state_2 tr_all second_font fs_medium tt_uppercase"><i
                                             class="fa fa-eye d_inline_m m_right_9"></i>View Details</button>
+                                    </a>
                                 </figcaption>
                             </figure>
                         </div>

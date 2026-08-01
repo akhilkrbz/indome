@@ -75,4 +75,28 @@ class HomeController extends Controller
 
         return view('web/products/list', compact('list', 'search'));
     }
+
+
+    public function productDetails($id)
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'Product Details');
+
+        $product = Product::find($id);
+        if (!$product) {
+            return redirect()->route('products.list')->with('error', 'Product not found.');
+        }
+
+        $images = DB::table('product_images')
+            ->where('product_id', $product->id)
+            ->orderByDesc('id')
+            ->get();
+
+        $variants = DB::table('product_variants')
+            ->where('product_id', $product->id)
+            ->orderByDesc('id')
+            ->get();
+
+        return view('web/products/product-details', compact('product', 'images', 'variants'));
+    }
 }

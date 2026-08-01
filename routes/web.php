@@ -8,6 +8,7 @@ Route::get('/contact-us', [HomeController::class, 'contact'])->name('contact-us'
 Route::post('/contact-us', [HomeController::class, 'contactStore'])->name('contact.store');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/products', [HomeController::class, 'products'])->name('products');
+Route::get('/products-details/{id}', [HomeController::class, 'productDetails'])->name('view-product.details');
 
 
 
