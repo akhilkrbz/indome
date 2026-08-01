@@ -22,7 +22,7 @@
                                         <div class="mb-3">
                                             <label for="category_id" class="form-label">Category</label>
                                             <select class="form-select" id="category_id" name="category_id">
-                                                <option>Select Category</option>
+                                                <option value="">Select Category</option>
                                                 @foreach($categories as $category)
                                                     <option value="{{ $category->id }}" {{ $product->category_id == $category->id ? 'selected' : '' }}>
                                                         {{ $category->category_name }}
@@ -34,7 +34,7 @@
                                         <div class="mb-3">
                                             <label for="sub_category_id" class="form-label">Sub Category</label>
                                             <select class="form-select" id="sub_category_id" name="sub_category_id">
-                                                <option>Select Sub Category</option>
+                                                <option value="">Select Sub Category</option>
                                                 @foreach($sub_categories as $subCategory)
                                                     <option value="{{ $subCategory->id }}" {{ $product->sub_category_id == $subCategory->id ? 'selected' : '' }}>
                                                         {{ $subCategory->sub_category_name }}
