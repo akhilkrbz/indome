@@ -1,4 +1,6 @@
 <!--libs include-->
+<script src="{{ asset('web/plugins/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('web/plugins/isotope.pkgd.min.js') }}"></script>
 <script src="{{ asset('web/plugins/layerslider/js/greensock.js') }}"></script>
 <script src="{{ asset('web/plugins/layerslider/js/layerslider.kreaturamedia.jquery.js') }}"></script>
 <script src="{{ asset('web/plugins/layerslider/js/layerslider.transitions.js') }}"></script>

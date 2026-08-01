@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -54,11 +55,24 @@ class HomeController extends Controller
         return view('web/home/about-us');
     }
 
-    public function products()
+    public function products(Request $request)
     {
         session()->put('main_page', 'Indome Furnitures ');
         session()->put('sub_page', 'Products');
 
-        return view('web/products/list');
+        $search = request()->input('search') ?? '';
+
+        $list = Product::with(['images', 'category', 'sub_category'])->orderBy('id', 'desc');
+
+        if($search != "") {
+            $list = $list->where(function($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%')
+                      ->orWhere('product_code', 'like', '%' . $search . '%');
+            });
+        }
+
+        $list = $list->paginate(9);
+
+        return view('web/products/list', compact('list', 'search'));
     }
 }
