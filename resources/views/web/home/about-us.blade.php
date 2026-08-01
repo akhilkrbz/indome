@@ -5,7 +5,7 @@
     <div class="page_section_offset">
         <div class="container">
             <div class="row">
-                <aside class="col-lg-3 col-md-3 col-sm-3 p_top_4">
+                <aside class="col-lg-3 col-md-3 col-sm-3 p_top_4 d-none">
                     <!--categories widget-->
                     <section class="m_bottom_30">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Categories</h5>
@@ -100,37 +100,64 @@
                         </figcaption>
                     </figure>
                 </aside>
-                <section class="col-lg-9 col-md-9 col-sm-9">
+                <section class="col-lg-12 col-md-12 col-sm-12">
                     <h2 class="fw_light second_font color_dark m_bottom_27 tt_uppercase">About Us</h2>
                     <div class="clearfix m_bottom_15">
                         <div class="t_xs_align_c f_left m_right_20 m_xs_bottom_15 f_xs_none"><img
                                 src="{{ asset('web/images/about_1.jpg') }}" alt=""></div>
-                        <p class="fw_light m_bottom_14 p_top_4">Ut tellus dolor, dapibus eget, elementum vel, cursus
-                            eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit
-                            amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum
-                            magna.</p>
-                        <p class="fw_light">Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Ut
-                            tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna.
-                            Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet,
-                            consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo.</p>
+                        <p class="fw_light m_bottom_7 p_top_4">We are the leading provider of Indoor, Outdoor Furnitures and Fabric Supply Company located in Dubai. We are dedicated to providing high quality, customizable furnitures that meets the modern needs of hotels, offices, commercial spaces.</p>
+                        <p class="fw_light m_bottom_7">For over years, we have been a trusted supplier of premium indoor and outdoor furniture, along with high-quality fabric solutions, proudly serving customers across Dubai. We are committed to delivering durable, stylish, and customizable furniture designed to meet the evolving needs of hotels, offices, restaurants, resorts, and commercial spaces. With a focus on exceptional craftsmanship, reliable service, and customer satisfaction, we provide furniture solutions that combine functionality, comfort, and modern design to enhance every environment.</p>
+                        <p class="fw_light m_bottom_7">Our commitment goes beyond providing furniture — we aim to create inspiring spaces that reflect quality, elegance, and functionality. With innovative designs, attention to detail, and a customer-focused approach, we continue to build long-lasting partnerships by delivering solutions that bring comfort and style to every project.</p>
+                        <p class="fw_light m_bottom_7">At our core, we believe every space deserves furniture that is both practical and visually appealing. Our experienced team works closely with clients to understand their requirements and deliver tailored solutions using quality materials and modern designs. Whether it’s a hospitality project, commercial space, or outdoor setting, we strive to provide products that enhance the overall experience and add lasting value.</p>
+                        <p class="fw_light m_bottom_7">With a strong understanding of industry trends and customer expectations, we continuously strive to deliver furniture solutions that combine durability, aesthetics, and functionality. From concept selection to final installation, we ensure a seamless experience by maintaining high standards of quality, precision, and service for every project we undertake.</p>
                     </div>
-                    <b class="d_block fs_large">Integer retrum ante eu lacus.</b>
-                    <p class="fw_light m_bottom_14">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                        cubilia Curae. Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec erat volutpat. Duis ac
-                        turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris
-                        fermentum dictum magna. Ut pharetra augue nec erat volutpat.</p>
-                    <b class="d_block fs_large">Nam elit agna, endrerit sit amet, tincidunt ac.</b>
-                    <p class="fw_light m_bottom_14">Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Lorem ipsum dolor sit amet,
-                        consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus
-                        dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat
-                        volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel,
-                        scelerisque eget, malesuada at, neque. Vivamus eget nibh.</p>
-                    <b class="d_block fs_large">Integer retrum ante eu lacus.</b>
-                    <p class="fw_light m_bottom_14">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                        cubilia Curae. Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec erat volutpat. Duis ac
-                        turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris
-                        fermentum dictum magna. Ut pharetra augue nec erat volutpat.</p>
+                    <b class="d_block fs_large">Our Products</b>
+                    <p class="fw_light m_bottom_14">
+                        <ul class="vr_list_type_1">
+                            <li class="fw_light m_bottom_14"><i class="fa fa-caret-right"></i>Customized furnitures as per the requirements</li>
+                            <li class="fw_light m_bottom_14"><i class="fa fa-caret-right"></i>Beach Umbrellas and base</li>
+                            <li class="fw_light m_bottom_14"><i class="fa fa-caret-right"></i>Sun Lounger with cushions</li>
+                            <li class="fw_light m_bottom_14"><i class="fa fa-caret-right"></i>Towels</li>
+                            <li class="fw_light m_bottom_14"><i class="fa fa-caret-right"></i>Fabric and Zippers</li>
+                        </ul>
+                    </p>
+                    <br>
+
+
+                    <b class="d_block fs_large">Customized Furnitures</b>
+                    <p class="fw_light m_bottom_7">Bring your vision to life with our customized furniture solutions, tailored to suit your unique style, space, and functional needs.</p>
+                    <p class="fw_light m_bottom_14">Our expert craftsmanship ensures every piece reflects your brand identity and design preferences. From concept to completion, we deliver furniture solutions built around your specific requirements.</p>
+
+
+
+                    <b class="d_block fs_large">Beach Umbrellas and Furnitures</b>
+                    <p class="fw_light m_bottom_7">Create the perfect seaside experience with our premium beach umbrellas and furniture.</p>
+                    <p class="fw_light m_bottom_14">Designed for comfort, durability, and style, our collections enhance any coastal environment. Perfect for beach resorts, cafes, and outdoor leisure spaces seeking premium solutions.</p>
+
+
+
+                    <b class="d_block fs_large">Sun Loungers</b>
+                    <p class="fw_light m_bottom_7">Relax in style and comfort with our premium sun loungers, perfect for poolside, beaches, and outdoor spaces.</p>
+                    <p class="fw_light m_bottom_14">Designed with ergonomic comfort and durable finishes for a relaxing outdoor experience. Ideal for resorts, hotels, and leisure spaces looking to enhance guest comfort and style.</p>
+
+
+
+                    <b class="d_block fs_large">Restaurants and Café Furnitures</b>
+                    <p class="fw_light m_bottom_7">Elevate your dining spaces with our stylish and durable restaurant and café furniture.</p>
+                    <p class="fw_light m_bottom_14">Our furniture solutions are designed to create inviting atmospheres while offering long-lasting performance. From modern cafés to luxury restaurants, we provide designs that match every hospitality concept.</p>
+
+
+
+                    <b class="d_block fs_large">Umbrella Canopy & Base</b>
+                    <p class="fw_light m_bottom_7">Enhance your outdoor spaces with our durable and stylish umbrella canopies and bases. Designed to provide reliable shade and stability, they are perfect for patios, gardens, beaches, and poolside areas.</p>
+                    <p class="fw_light m_bottom_14"> Crafted with high-quality materials to withstand outdoor conditions while maintaining elegant appeal. Available in versatile designs to complement commercial and residential outdoor settings.</p>
+
+
+
+                    <b class="d_block fs_large">Towels</b>
+                    <p class="fw_light m_bottom_7">Elevate your dining spaces with our stylish and durable restaurant and café furniture. Designed for comfort and practicality, our collection perfectly balances function and style to suit hospitality needs.</p>
+                    <p class="fw_light m_bottom_14"> Premium-quality towels designed for exceptional softness, durability, and everyday hospitality use. Perfect for hotels, restaurants, spas, and resorts seeking comfort and a refined guest experience.</p>
+                    
                 </section>
             </div>
         </div>

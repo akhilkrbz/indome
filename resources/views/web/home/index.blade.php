@@ -70,7 +70,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <!--banner-->
                     <figure class="relative wrapper scale_image_container m_bottom_30 r_image_container">
-                        <img src="{{ asset('web/images/home_img_1.jpg') }}" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/home/home1.jpg') }}" alt="" class="tr_all scale_image">
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
@@ -99,7 +99,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <!--banner-->
                     <figure class="relative wrapper scale_image_container r_image_container m_xs_bottom_30">
-                        <img src="{{ asset('web/images/home_img_2.jpg') }}" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/home/home2.jpg') }}" alt="" class="tr_all scale_image">
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
@@ -131,7 +131,7 @@
                     </div>
                     <!--banner-->
                     <figure class="relative wrapper scale_image_container r_image_container">
-                        <img src="{{ asset('web/images/home_img_3.jpg') }}" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/home/home3.jpg') }}" alt="" class="tr_all scale_image">
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
@@ -1988,118 +1988,8 @@
             </div>
         </div>
     </div>
-    <!--brands carousel-->
-    <div class="section_offset">
-        <section class="container m_bottom_10">
-            <div class="d_table m_bottom_5 w_full animated hidden" data-animation="fadeInLeft">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 v_align_m d_table_cell f_none">
-                    <h5 class="second_font color_dark tt_uppercase fw_light d_inline_m m_bottom_4">Brands</h5>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align_r d_table_cell f_none">
-                    <!--carousel navigation-->
-                    <div class="clearfix d_inline_b">
-                        <button
-                            class="brands_carousel_prev black_hover button_type_4 grey state_2 tr_all d_block f_left vc_child m_right_5"><i
-                                class="fa fa-angle-left d_inline_m"></i></button>
-                        <button
-                            class="brands_carousel_next black_hover button_type_4 grey state_2 tr_all d_block f_left vc_child"><i
-                                class="fa fa-angle-right d_inline_m"></i></button>
-                    </div>
-                </div>
-            </div>
-            <hr class="divider_bg m_bottom_15 animated hidden" data-animation="fadeInLeft" data-animation-delay="100">
-            <!--carousel-->
-            <div class="row">
-                <div class="owl-carousel" data-nav="brands_carousel_" data-owl-carousel-options='{
-                                    "stagePadding" : 15,
-                                    "margin" : 30,
-                                    "responsive" : {
-                                            "0" : {
-                                                "items" : 2
-                                            },
-                                            "320" : {
-                                                "items" : 3
-                                            },
-                                            "550" : {
-                                                "items" : 4
-                                            },
-                                            "768" : {
-                                                "items" : 4
-                                            },
-                                            "992" : {
-                                                "items" : 5
-                                            },
-                                            "1200" : {
-                                                "items" : 6
-                                            }
-                                        }
-                                    }'>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="200">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_1.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="350">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_2.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="500">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_3.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="650">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_4.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="800">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_5.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="950">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_6.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1100">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_1.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1250">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_2.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1400">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_3.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1550">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_4.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1700">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_5.jpg') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="animated hidden" data-animation="fadeInLeft" data-animation-delay="1850">
-                        <a href="#" class="d_block frame_container">
-                            <img src="{{ asset('web/images/client_img_6.jpg') }}" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <!--customers-->
-    <div class="section_offset bg_grey_light_2">
+
+    <div class="section_offset bg_grey_light_2 d-none">
         <section class="container">
             <div class="d_table m_bottom_5 w_full animated hidden" data-animation="fadeInLeft">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 v_align_m d_table_cell f_none">
@@ -2218,232 +2108,7 @@
             </div>
         </section>
     </div>
-    <!--blog-->
-    <div class="section_offset p_bottom_0">
-        <section class="container m_bottom_5">
-            <div class="d_table m_bottom_5 w_full hidden animated" data-animation="fadeInLeft">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 v_align_m d_table_cell f_none">
-                    <h5 class="second_font color_dark tt_uppercase fw_light d_inline_m m_bottom_4">From The Blog</h5>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4 t_align_r d_table_cell f_none">
-                    <!--carousel navigation-->
-                    <div class="clearfix d_inline_b">
-                        <button
-                            class="blog_prev black_hover button_type_4 grey state_2 tr_all d_block f_left vc_child m_right_5"><i
-                                class="fa fa-angle-left d_inline_m"></i></button>
-                        <button class="blog_next black_hover button_type_4 grey state_2 tr_all d_block f_left vc_child"><i
-                                class="fa fa-angle-right d_inline_m"></i></button>
-                    </div>
-                </div>
-            </div>
-            <hr class="divider_bg m_bottom_15 animated hidden" data-animation="fadeInLeft" data-animation-delay="100">
-            <!--carousel-->
-            <div class="row">
-                <div class="owl-carousel" data-nav="blog_" data-owl-carousel-options='{
-                                "stagePadding" : 15,
-                                "margin" : 30,
-                                "responsive" : {
-                                        "0" : {
-                                            "items" : 1
-                                        },
-                                        "470" : {
-                                            "items" : 2
-                                        },
-                                        "992" : {
-                                            "items" : 3
-                                        }
-                                    }
-                                }'>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="200">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_1.jpg') }}" alt=""
-                                        class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div
-                                                class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i>
-                                                <span class="fs_small d_inline_m">3</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Sed ut
-                                                        perspiciatis unde omnis iste</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum
-                                                vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat
-                                                lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="350">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_2.jpg') }}" alt=""
-                                        class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div
-                                                class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i>
-                                                <span class="fs_small d_inline_m">77</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Donec
-                                                        sagittis euismod purus</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum
-                                                vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat
-                                                lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="500">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_3.jpg') }}" alt=""
-                                        class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div
-                                                class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i>
-                                                <span class="fs_small d_inline_m">0</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Natus error
-                                                        sit voluptatem</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum
-                                                vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat
-                                                lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="650">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_1.jpg') }}" alt=""
-                                        class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div
-                                                class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i>
-                                                <span class="fs_small d_inline_m">3</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Sed ut
-                                                        perspiciatis unde omnis iste</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum
-                                                vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat
-                                                lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="800">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_2.jpg') }}" alt=""
-                                        class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div
-                                                class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i>
-                                                <span class="fs_small d_inline_m">77</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Donec
-                                                        sagittis euismod purus</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum
-                                                vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat
-                                                lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                    <!--post-->
-                    <div class="animated hidden" data-animation="fadeInDown" data-animation-delay="950">
-                        <article class="frame_container scale_image_container">
-                            <figure class="relative">
-                                <a href="#" class="d_block wrapper m_bottom_15"><img src="{{ asset('web/images/blog_img_3.jpg') }}" alt=""
-                                        class="tr_all scale_image"></a>
-                                <figcaption>
-                                    <div class="clearfix">
-                                        <!--post info (date & comments)-->
-                                        <div class="post_info f_left m_right_20 t_align_c lh_small m_sm_right_10">
-                                            <div
-                                                class="date bg_scheme_color color_white second_font tt_uppercase m_bottom_15">
-                                                <b class="d_inline_b">22</b>
-                                                <p class="fs_ex_small">Jun</p>
-                                            </div>
-                                            <a href="#" class="sc_hover"><i class="fa fa-comments d_inline_m m_right_3"></i>
-                                                <span class="fs_small d_inline_m">0</span></a>
-                                        </div>
-                                        <!--post excerpt-->
-                                        <div class="f_left post_excerpt m_bottom_15">
-                                            <h5 class="second_font m_bottom_13"><a href="#" class="sc_hover"><b>Natus error
-                                                        sit voluptatem</b></a></h5>
-                                            <p class="fw_light">Donec porta diam eu massa. Quisque diam lorem, interdum
-                                                vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat
-                                                lacinia fermentum.</p>
-                                        </div>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+ 
     <div class="section_offset">
         <div class="container">
             <hr class="divider_lbrown m_bottom_25 animated hidden" data-animation="fadeInLeft" data-animation-delay="100">
@@ -2457,10 +2122,9 @@
                             <i class="fa fa-lock d_inline_m"></i></div>
                         <!--description-->
                         <div class="d_inline_m description w_sm_full">
-                            <h3 class="second_font color_dark m_bottom_10">Safe &amp; Secure</h3>
-                            <p class="fw_light m_bottom_10">Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec
-                                augue.</p>
-                            <a href="#" class="sc_hover second_font">Click Here to Read More</a>
+                            <h3 class="second_font color_dark m_bottom_10">Quality Guaranteed</h3>
+                            <p class="fw_light m_bottom_10">Every product is crafted with premium materials and undergoes strict quality checks for lasting durability.</p>
+                            <a href="{{ route('about-us') }}" class="sc_hover second_font">Click Here to Read More</a>
                         </div>
                     </section>
                 </div>
@@ -2473,10 +2137,9 @@
                             <i class="fa fa-truck d_inline_m"></i></div>
                         <!--description-->
                         <div class="d_inline_m description">
-                            <h3 class="second_font color_dark m_bottom_10">Free Delivery</h3>
-                            <p class="fw_light m_bottom_10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                Maurisfermentum dictum.</p>
-                            <a href="#" class="sc_hover second_font">Click Here to Read More</a>
+                            <h3 class="second_font color_dark m_bottom_10">Bulk Order Support</h3>
+                            <p class="fw_light m_bottom_10">Efficiently fulfill large orders with reliable stock availability and competitive wholesale pricing.</p>
+                            <a href="{{ route('about-us') }}" class="sc_hover second_font">Click Here to Read More</a>
                         </div>
                     </section>
                 </div>
@@ -2489,10 +2152,9 @@
                             <i class="fa fa-certificate d_inline_m"></i></div>
                         <!--description-->
                         <div class="d_inline_m description">
-                            <h3 class="second_font color_dark m_bottom_10">Money Back Guarantee</h3>
-                            <p class="fw_light m_bottom_10">Etiam cursus leo vel metus. Nulla facilisi aenean nac eros.
-                                Vestibulum ante ipsum.</p>
-                            <a href="#" class="sc_hover second_font">Click Here to Read More</a>
+                            <h3 class="second_font color_dark m_bottom_10">Trusted by Businesses</h3>
+                            <p class="fw_light m_bottom_10">Preferred by retailers, hotels, resorts, and commercial projects for quality, reliability, and exceptional service.</p>
+                            <a href="{{ route('about-us') }}" class="sc_hover second_font">Click Here to Read More</a>
                         </div>
                     </section>
                 </div>

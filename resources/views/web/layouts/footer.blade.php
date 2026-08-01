@@ -101,21 +101,20 @@
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                    <div class="col-lg-8 col-md-8 col-sm-8 m_bottom_13 m_sm_bottom_30">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">About Us</h5>
                         <hr class="divider_bg m_bottom_25">
                         <div class="clearfix">
-                            <img src="{{ asset('web/images/logo.png') }}" class="f_left m_top_10 m_right_20"
+                            <img src="{{ asset('web/images/logo.png') }}" class="m_top_10 m_right_20"
                                 alt="">
-                            <p class="m_bottom_14 fw_light">Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut
-                                tellus dolor, dapibus eget, elementum vel, cursus.</p>
-                            <p class="m_bottom_10 fw_light">Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac
-                                turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque.
+                            <br>
+                            <p class="m_bottom_14 m_top_5 fw_light">We are the leading provider of Indoor, Outdoor Furnitures and Fabric Supply Company located in Dubai. We are dedicated to providing high quality, customizable furnitures that meets the modern needs of hotels, offices, commercial spaces.</p>
+                            <p class="m_bottom_10 fw_light">
                             </p>
                             <a href="{{ route('about-us') }}" class="sc_hover second_font">Read More</a>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">The Services</h5>
                         <hr class="divider_bg m_bottom_25">
                         <ul class="second_font vr_list_type_1 with_links">
@@ -132,7 +131,7 @@
                             <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>Categories</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -144,15 +143,15 @@
                             <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>About us</a></li>
                             <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
-                                        class="fa fa-caret-right"></i>New collection</a></li>
-                            <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
+                                        class="fa fa-caret-right"></i>Our Products</a></li>
+                            <!-- <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>Best sellers</a></li>
                             <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>Manufacturers</a></li>
                             <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>Privacy policy</a></li>
                             <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
-                                        class="fa fa-caret-right"></i>Terms &amp; condition</a></li>
+                                        class="fa fa-caret-right"></i>Terms &amp; condition</a></li> -->
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
@@ -178,13 +177,13 @@
                 &copy; {{ date('Y') }} <a href="/" class="sc_hover">Indome Furnitures</a>. All Rights Reserved.
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c f_none d_table_cell v_align_m d_xs_block">
-                <ul class="hr_list d_inline_b">
+                <!-- <ul class="hr_list d_inline_b">
                     <li class="m_right_5"><img src="{{ asset('web/images/payment_1.jpg') }}" alt=""></li>
                     <li class="m_right_5"><img src="{{ asset('web/images/payment_2.jpg') }}" alt=""></li>
                     <li class="m_right_5"><img src="{{ asset('web/images/payment_3.jpg') }}" alt=""></li>
                     <li class="m_right_5"><img src="{{ asset('web/images/payment_4.jpg') }}" alt=""></li>
                     <li class="m_right_5"><img src="{{ asset('web/images/payment_5.jpg') }}" alt=""></li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
