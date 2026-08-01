@@ -112,10 +112,10 @@ class Admin extends Controller
         ]);
 
         $data = [
-            'category_id'       => $request->input('category_id'),
-            'sub_category_id'   => $request->input('sub_category_id'),
+            'category_id'       => $request->input('category_id') ?? 0,
+            'sub_category_id'   => $request->input('sub_category_id') ?? 0,
             'name'              => $request->input('name'),
-            'product_code'      => $request->input('product_code'),
+            'product_code'      => $request->input('product_code') ?? null,
             'description'       => $request->input('description'),
             'created_at'        => now(),
             'updated_at'        => now(),
@@ -153,10 +153,10 @@ class Admin extends Controller
         ]);
 
         $data = [
-            'category_id'       => $request->input('category_id'),
-            'sub_category_id'   => $request->input('sub_category_id'),
+            'category_id'       => $request->input('category_id') ?? 0,
+            'sub_category_id'   => $request->input('sub_category_id') ?? 0,
             'name'              => $request->input('name'),
-            'product_code'      => $request->input('product_code'),
+            'product_code'      => $request->input('product_code') ?? null,
             'description'       => $request->input('description'),
             'updated_at'        => now(),
             'updated_by'        => auth()->user()->id
