@@ -228,6 +228,8 @@
 			</div>
 		</div>
 
+		@yield('modals')
+
 		@include('web.layouts.footer-scripts')
 	</body>
 </html>

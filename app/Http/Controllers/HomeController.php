@@ -38,13 +38,20 @@ class HomeController extends Controller
         DB::table('contact_us')->insert([
             'name'      => $request->input('name'),
             'email_id'  => $request->input('email'),
+            'product_id'  => $request->input('product_id') ?? null,
             'phone'     => $request->input('phone'),
             'message'   => $request->input('message'),
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
-        return redirect()->route('contact-us')->with('success', 'Your message has been sent successfully! Our Team will contact you soon.');
+        if( $request->input('product_id')) {
+            return redirect()->route('view-product.details', ['id' => $request->input('product_id')])->with('success', 'Your message has been sent successfully! Our Team will contact you soon.');
+        } else {
+            return redirect()->route('contact-us')->with('success', 'Your message has been sent successfully! Our Team will contact you soon.');
+        }
+
+        
     }
 
     public function aboutUs()

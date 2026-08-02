@@ -120,6 +120,7 @@
                                     <li class="m_right_5 m_bottom_3"><button
                                             class="color_button bg_light_yellow tr_all"></button></li>
                                 </ul>
+                                @include('web.layouts.alerts')
                                 <hr class="divider_light">
                                 <footer class="bg_grey_light_2">
                                     <div class="fs_big second_font m_bottom_17"><s class="color_light">$1 302.00</s> <b
@@ -130,8 +131,9 @@
                                             <input type="text" value="1" name="" readonly="" class="f_left color_light">
                                             <button class="f_left d_block black_hover tr_all bg_white">+</button>
                                         </div>
+                                        
                                         <br class="d_md_block d_none">
-                                        <button data-popup="#add_to_cart_popup" data-popup-transition-in="bounceInUp"
+                                        <button data-popup="#enquiry_modal" data-popup-transition-in="bounceInUp"
                                             data-popup-transition-out="bounceOutUp"
                                             class="button_type_2 d_block f_sm_none m_sm_bottom_3 t_align_c lbrown state_2 tr_all second_font fs_medium tt_uppercase f_left m_right_3 product_button"><i
                                                 class="fa fa-paper-plane d_inline_m m_right_9"></i>Send Enquiry</button>
@@ -328,4 +330,77 @@
         </div>
     </div>
 
+
+    
+
+@endsection
+
+
+@section('modals')
+<div class="init_popup" id="enquiry_modal">
+    <div class="popup init">
+        <div class="clearfix">
+            <div class="product_preview f_left f_xs_none wrapper m_xs_bottom_15">
+                <div class="d_block relative r_image_container">
+                    <img id="zoom" src="{{ asset('uploads/products/' . $product->id . '/' . $images->first()->filename) }}" alt="" data-zoom-image="{{ asset('uploads/products/' . $product->id . '/' . $images->first()->filename) }}">
+                    <div class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase"><i class="d_inline_m">Sale!</i></div>
+                </div>
+                <!--thumbnails-->
+                
+            </div>
+            <div class="product_description f_left f_xs_none">
+                <h3 class="second_font m_bottom_3 product_title"><a href="#" class="sc_hover">{{ $product->name }}</a></h3>
+                
+                <ul class="m_bottom_14">
+                    <li class="m_bottom_3"><span class="project_list_title second_font d_inline_b">Product Code:</span> <span class="fw_light">{{ $product->product_code }}</span></li>
+                </ul>
+                <hr class="divider_light m_bottom_15">
+                <p class="fw_light m_bottom_14 color_grey">{{ $product->description }}</p>
+                <div class="product_options">
+
+                    <form id="contactUsform" class="b_default_layout" method="post" action="{{ route('contact.store') }}">
+                        @csrf
+                        <ul>
+                            <input type="hidden" name="product_id" value="{{ $product->id }}">
+                            <li class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_15">
+                                    <label class="second_font required d_inline_b m_bottom_5 clickable"
+                                        for="cf_name">First Name</label><br>
+                                    <input type="text" name="name" id="cf_name" class="tr_all w_full fw_light" required>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_15">
+                                    <label class="second_font required d_inline_b m_bottom_5 clickable"
+                                        for="cf_email">Email Address</label><br>
+                                    <input type="email" name="email" id="cf_email"
+                                        class="tr_all w_full fw_light" required>
+                                </div>
+                            </li>
+                            <li class="m_bottom_15">
+                                <label class="second_font d_inline_b m_bottom_5 clickable"
+                                    for="cf_telephone">Telephone</label><br>
+                                <input type="text" name="phone" id="cf_telephone"
+                                    class="tr_all w_full fw_light" required>
+                            </li>
+                            <li class="m_bottom_5">
+                                <label class="second_font d_inline_b m_bottom_5 clickable"
+                                    for="cf_message">Message</label><br>
+                                <textarea id="cf_message" name="message" rows="6"
+                                    class="tr_all w_full fw_light" required></textarea>
+                            </li>
+                            <li>
+                                <button type="submit"
+                                    class="button_type_2 black state_2 tr_all second_font fs_medium tt_uppercase d_inline_b"><span
+                                        class="m_left_10 m_right_10 d_inline_b">Submit</span></button>
+                            </li>
+                        </ul>
+                    </form>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <button class="close_popup fw_light fs_large tr_all">x</button>
+    </div>
+</div>
 @endsection

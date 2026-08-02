@@ -2232,6 +2232,8 @@ table td{
 
 #quick_view > .popup,
 
+#enquiry_modal > .popup,
+
 #add_to_cart_popup > .popup{
 
 	width:840px;
@@ -2251,6 +2253,8 @@ table td{
 }
 
 #quick_view .close_popup,
+
+#enquiry_modal .close_popup,
 
 #add_to_cart_popup .close_popup{
 
@@ -4158,6 +4162,12 @@ input[type="radio"] + label::after{
 
 	}
 
+	#enquiry_modal > .popup{
+
+		width:750px;
+
+	}
+
 }
 
 @media only screen and (max-width:767px){
@@ -4169,6 +4179,12 @@ input[type="radio"] + label::after{
 	}
 
 	#quick_view{
+
+		display: none !important;
+
+	}
+
+	#enquiry_modal{
 
 		display: none !important;
 
