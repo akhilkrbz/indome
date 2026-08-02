@@ -369,6 +369,32 @@ class Admin extends Controller
         return redirect()->route('products.images.list', $product->id)->with('success', 'Image uploaded successfully.');
     }
 
+    public function productImageDelete($productId, $imageId)
+    {
+        $product = Product::find($productId);
+        if (!$product) {
+            return redirect()->route('products.list')->with('error', 'Product not found.');
+        }
+
+        $image = DB::table('product_images')
+            ->where('id', $imageId)
+            ->where('product_id', $product->id)
+            ->first();
+
+        if (!$image) {
+            return redirect()->route('products.images.list', $product->id)->with('error', 'Image not found.');
+        }
+
+        $imagePath = public_path('uploads/products/' . $product->id . '/' . $image->filename);
+        if (file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+
+        DB::table('product_images')->where('id', $imageId)->delete();
+
+        return redirect()->route('products.images.list', $product->id)->with('success', 'Image deleted successfully.');
+    }
+
     public function productEnquiries()
     {
         session()->put('main_page', 'Indome Furnitures ');

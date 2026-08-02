@@ -36,6 +36,13 @@
                                     <img src="{{ asset('uploads/products/' . $product->id . '/' . $image->filename) }}" class="card-img-top" alt="Product image" style="height: 220px; object-fit: cover;">
                                     <div class="card-body">
                                         <p class="mb-0 text-muted">{{ $image->filename }}</p>
+                                        <form action="{{ route('products.image.delete', ['productId' => $product->id, 'imageId' => $image->id]) }}" method="POST" class="mt-3">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this image?')">
+                                                <i class='bx bx-trash'></i> Delete
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
