@@ -14,7 +14,7 @@ class Admin extends Controller
         session()->put('main_page', 'Indome Furnitures ');
         session()->put('sub_page', 'Contact List');
 
-        $list = DB::table('contact_us')->orderBy('id', 'desc')->paginate(10);
+        $list = DB::table('contact_us')->whereNull('product_id')->orderBy('id', 'desc')->paginate(10);
 
         return view('admin/contacts', compact('list'));
     }
@@ -367,5 +367,18 @@ class Admin extends Controller
         ]);
 
         return redirect()->route('products.images.list', $product->id)->with('success', 'Image uploaded successfully.');
+    }
+
+    public function productEnquiries()
+    {
+        session()->put('main_page', 'Indome Furnitures ');
+        session()->put('sub_page', 'Product Enquiries');
+
+        $list = DB::table('contact_us')
+        ->select('contact_us.*', 'products.name as product_name')
+        ->join('products', 'contact_us.product_id', '=', 'products.id')
+        ->whereNotNull('product_id')->orderBy('id', 'desc')->paginate(10);
+
+        return view('admin/product-enquiries', compact('list'));
     }
 }

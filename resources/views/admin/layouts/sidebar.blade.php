@@ -45,6 +45,14 @@
 					</a>
 				</li>
 
+				<li class="{{ (request()->route()->getName() == 'product-enquiries') ? 'mm-active' : '' }}">
+					<a href="{{ route('product-enquiries') }}">
+						<div class="parent-icon"><i class="bx bx-paper-plane"></i>
+						</div>
+						<div class="menu-title">Product Enquiries</div>
+					</a>
+				</li>
+
 				
 			</ul>
 			<!--end navigation-->
