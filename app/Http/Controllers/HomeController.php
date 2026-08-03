@@ -131,7 +131,9 @@ class HomeController extends Controller
 
             if($single_email->product_id != null && $single_email->product_id != 0) {
                 
-
+                $res = false;
+                $email_to_user = $single_email->email_to_user == 1 ? 1 : 0;
+                $email_to_admin = $single_email->email_to_admin == 1 ? 1 : 0;
                 if ($single_email->email_to_user == 0) {
                     $product = Product::find($single_email->product_id);
                     $email_body = view('emails.product-enquiry-user-email', [
@@ -140,8 +142,9 @@ class HomeController extends Controller
                     ])->render();
                     $email_to = $single_email->email_id;
                     $subject = "Thank You for Contacting Indomefurnitures";
+                    $email_to_user = 1;
 
-                    $this->sendEmailToUser($email_body, $email_to, $subject);
+                    $res = $this->sendEmailToUser($email_body, $email_to, $subject);
 
                 }
 
@@ -153,9 +156,20 @@ class HomeController extends Controller
                     ])->render();
                     $email_to = "indomefurnitures@gmail.com";
                     $subject = "Customer Enquiry Received for ".$product->name." Action Required";
+                    $email_to_admin = 1;
 
-                    $this->sendEmailToUser($email_body, $email_to, $subject);
+                    $res = $this->sendEmailToUser($email_body, $email_to, $subject);
 
+                }
+
+                if($res) {
+                    DB::table('contact_us')
+                        ->where('id', $single_email->id)
+                        ->update([
+                            'email_to_admin' => $email_to_admin,
+                            'email_to_user' => $email_to_user,
+                            'updated_at' => now(),
+                        ]);
                 }
             }
             
@@ -164,18 +178,26 @@ class HomeController extends Controller
 
 
     public function sendEmailToUser($email_body, $email_to, $subject) {
-        $mailtrap = MailtrapClient::initSendingEmails(
-            apiKey: env('MAILTRAP_API_KEY')
-        );
 
-        $email = (new MailtrapEmail())
-            ->from(new Address('info@indomefurnitures.com', 'Indome Furnitures'))
-            ->to(new Address($email_to))
-            ->subject($subject)
-            ->html($email_body)
-            ->text('Your email client does not support HTML.');
+        try {
+            $mailtrap = MailtrapClient::initSendingEmails(
+                apiKey: env('MAILTRAP_API_KEY')
+            );
 
-        $response = $mailtrap->send($email);
+            $email = (new MailtrapEmail())
+                ->from(new Address('info@indomefurnitures.com', 'Indome Furnitures'))
+                ->to(new Address($email_to))
+                ->subject($subject)
+                ->html($email_body)
+                ->text('Your email client does not support HTML.');
+
+            $response = $mailtrap->send($email);
+
+            return true;
+        } catch (\Throwable $th) {
+            return false;
+        }
+        
 
         // Access response body as array (helper optional)
         // var_dump(ResponseHelper::toArray($response));
