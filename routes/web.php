@@ -11,6 +11,8 @@ Route::get('/products', [HomeController::class, 'products'])->name('products');
 Route::get('/products-details/{id}', [HomeController::class, 'productDetails'])->name('view-product.details');
 
 
+Route::get('/send-mail', [HomeController::class, 'sendMail'])->name('send-mail');
+
 
 
 

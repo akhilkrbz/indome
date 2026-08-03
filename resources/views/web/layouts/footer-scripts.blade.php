@@ -21,3 +21,21 @@
 <!--theme initializer-->
 <script src="{{ asset('web/js/themeCore.js') }}"></script>
 <script src="{{ asset('web/js/theme.js') }}"></script>
+<script>
+    $(document).ready(function() {
+        var send_email = "{{ session('send_email') }}";
+        console.log("send_email:", send_email);
+        if(send_email === "1" || send_email === 1 || send_email === true) {
+            $.ajax({
+                url: "{{ route('send-mail') }}",
+                method: "GET",
+                success: function(response) {
+                    console.log("Email sent successfully:", response);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error sending email:", error);
+                }
+            });
+        }
+    });
+</script>

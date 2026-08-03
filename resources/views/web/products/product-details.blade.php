@@ -10,8 +10,13 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_20 m_xs_bottom_15">
                             <div class="wrapper">
                                 <div class="d_block relative r_image_container">
+                                    @if(count($images) > 0)
                                     <img id="zoom" src="{{ asset('uploads/products/' . $product->id . '/' . $images->first()->filename) }}" alt=""
                                         data-zoom-image="{{ asset('uploads/products/' . $product->id . '/' . $images->first()->filename) }}">
+                                    @else
+                                    <img id="zoom" src="{{ asset('web/images/no-image.jpg') }}" alt="No Image Available"
+                                        data-zoom-image="{{ asset('web/images/no-image.jpg') }}">
+                                    @endif
                                     <div
                                         class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
                                         <i class="d_inline_m">Sale!</i>
@@ -342,8 +347,12 @@
         <div class="clearfix">
             <div class="product_preview f_left f_xs_none wrapper m_xs_bottom_15">
                 <div class="d_block relative r_image_container">
+                    @if(count($images) > 0)
                     <img id="zoom" src="{{ asset('uploads/products/' . $product->id . '/' . $images->first()->filename) }}" alt="" data-zoom-image="{{ asset('uploads/products/' . $product->id . '/' . $images->first()->filename) }}">
                     <div class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase"><i class="d_inline_m">Sale!</i></div>
+                    @else
+                    <img id="zoom" src="{{ asset('web/images/no-image.jpg') }}" alt="No Image Available" data-zoom-image="{{ asset('web/images/no-image.jpg') }}">
+                    @endif
                 </div>
                 <!--thumbnails-->
                 

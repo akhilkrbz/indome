@@ -6,6 +6,11 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use Mailtrap\Helper\ResponseHelper;
+use Mailtrap\MailtrapClient;
+use Mailtrap\Mime\MailtrapEmail;
+use Symfony\Component\Mime\Address;
+
 class HomeController extends Controller
 {
     public function index()
@@ -46,7 +51,10 @@ class HomeController extends Controller
         ]);
 
         if( $request->input('product_id')) {
-            return redirect()->route('view-product.details', ['id' => $request->input('product_id')])->with('success', 'Your message has been sent successfully! Our Team will contact you soon.');
+            return redirect()
+                ->route('view-product.details', ['id' => $request->input('product_id')])
+                ->with('success', 'Your message has been sent successfully! Our Team will contact you soon.')
+                ->with('send_email', true);
         } else {
             return redirect()->route('contact-us')->with('success', 'Your message has been sent successfully! Our Team will contact you soon.');
         }
@@ -105,5 +113,71 @@ class HomeController extends Controller
             ->get();
 
         return view('web/products/product-details', compact('product', 'images', 'variants'));
+    }
+
+
+    public function sendMail() {
+
+        $pending_emails = DB::table('contact_us')
+            ->where('email_to_admin', 0)
+            ->orWhere('email_to_user', 0)
+            ->get();
+
+        $mailtrap = MailtrapClient::initSendingEmails(
+            apiKey: env('MAILTRAP_API_KEY')
+        );
+
+        foreach ($pending_emails as $key => $single_email) {
+
+            if($single_email->product_id != null && $single_email->product_id != 0) {
+                
+
+                if ($single_email->email_to_user == 0) {
+                    $product = Product::find($single_email->product_id);
+                    $email_body = view('emails.product-enquiry-user-email', [
+                        'product' => $product, 
+                        'contact' => $single_email
+                    ])->render();
+                    $email_to = $single_email->email_id;
+                    $subject = "Thank You for Contacting Indomefurnitures";
+
+                    $this->sendEmailToUser($email_body, $email_to, $subject);
+
+                }
+
+                if ($single_email->email_to_admin == 0) {
+                    $product = Product::find($single_email->product_id);
+                    $email_body = view('emails.product-enquiry-admin-email', [
+                        'product' => $product, 
+                        'contact' => $single_email
+                    ])->render();
+                    $email_to = "indomefurnitures@gmail.com";
+                    $subject = "Customer Enquiry Received for ".$product->name." Action Required";
+
+                    $this->sendEmailToUser($email_body, $email_to, $subject);
+
+                }
+            }
+            
+        }
+    }
+
+
+    public function sendEmailToUser($email_body, $email_to, $subject) {
+        $mailtrap = MailtrapClient::initSendingEmails(
+            apiKey: env('MAILTRAP_API_KEY')
+        );
+
+        $email = (new MailtrapEmail())
+            ->from(new Address('info@indomefurnitures.com', 'Indome Furnitures'))
+            ->to(new Address($email_to))
+            ->subject($subject)
+            ->html($email_body)
+            ->text('Your email client does not support HTML.');
+
+        $response = $mailtrap->send($email);
+
+        // Access response body as array (helper optional)
+        // var_dump(ResponseHelper::toArray($response));
     }
 }
