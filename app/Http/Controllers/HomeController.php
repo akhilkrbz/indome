@@ -18,7 +18,20 @@ class HomeController extends Controller
         session()->put('main_page', 'Indome Furnitures ');
         session()->put('sub_page', 'Home');
 
-        return view('web/home/index');
+        $search = request()->input('search') ?? '';
+
+        $list = Product::with(['images', 'category', 'sub_category'])->orderBy('id', 'desc');
+
+        if($search != "") {
+            $list = $list->where(function($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%')
+                      ->orWhere('product_code', 'like', '%' . $search . '%');
+            });
+        }
+
+        $list = $list->limit(4)->get();
+
+        return view('web/home/index', compact('list', 'search'));
     }
 
     public function contact()
