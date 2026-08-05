@@ -1,4 +1,4 @@
-<section class="m_bottom_38 m_xs_bottom_30">
+<section class="m_bottom_38 m_xs_bottom_30 d-none">
     <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Filter</h5>
     <hr class="divider_bg m_bottom_23">
     <form>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -89,6 +90,8 @@ class HomeController extends Controller
         session()->put('sub_page', 'Products');
 
         $search = request()->input('search') ?? '';
+        $category = request()->input('category') ?? '';
+        $subcategory = request()->input('subcategory') ?? '';
 
         $list = Product::with(['images', 'category', 'sub_category'])->orderBy('id', 'desc');
 
@@ -99,9 +102,19 @@ class HomeController extends Controller
             });
         }
 
+        if($category != "") {
+            $list = $list->where('category_id', $category);
+        }
+
+        if($subcategory != "") {
+            $list = $list->where('sub_category_id', $subcategory);
+        }
+
         $list = $list->paginate(9);
 
-        return view('web/products/list', compact('list', 'search'));
+        $categories = Category::with('sub_categories')->get();
+
+        return view('web/products/list', compact('list', 'search', 'categories'));
     }
 
 

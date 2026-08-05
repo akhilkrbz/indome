@@ -85,14 +85,12 @@
                         </figcaption>
                     </figure>
                     <!--banner-->
-                    <a href="#" class="banner_type_2 scheme_color m_xs_bottom_30 d_block">
+                    <a href="{{ route('contact-us') }}" class="banner_type_2 scheme_color m_xs_bottom_30 d_block">
                         <span class="bg_scheme_color inner color_white t_align_c d_block">
-                            <span class="second_font tt_uppercase fw_light m_bottom_11 d_block fs_big_2 ba_title">Free
-                                Shipping</span>
-                            <span class="fs_large fw_light m_bottom_15 d_block ba_title_2">on orders over $500</span>
+                            <span class="second_font tt_uppercase fw_light m_bottom_11 d_block fs_big_2 ba_title">Contact Now!</span>
+                            <span class="fs_large fw_light m_bottom_15 d_block ba_title_2">For Orders </span>
                             <span
-                                class="second_font tt_uppercase color_white fs_medium button_type_7 d_inline_b bg_transparent tr_all">Learn
-                                More</span>
+                                class="second_font tt_uppercase color_white fs_medium button_type_7 d_inline_b bg_transparent tr_all">Click Here</span>
                         </span>
                     </a>
                 </div>
