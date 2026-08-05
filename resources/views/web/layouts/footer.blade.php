@@ -154,7 +154,7 @@
                                         class="fa fa-caret-right"></i>Terms &amp; condition</a></li> -->
                         </ul>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Like Us On Facebook</h5>
                         <hr class="divider_bg m_bottom_15">
 
@@ -166,7 +166,7 @@
                             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                         </iframe>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
