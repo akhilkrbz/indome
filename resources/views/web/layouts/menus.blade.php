@@ -111,7 +111,7 @@
                     </nav>
                 </div>
                 <div class="col-lg-3 col-md-3 clearfix t_sm_align_c">
-                    <ul class="hr_list si_list shop_list f_right f_sm_none d_sm_inline_b t_sm_align_l">
+                    <!-- <ul class="hr_list si_list shop_list f_right f_sm_none d_sm_inline_b t_sm_align_l">
                         <li>
                             <a href="#" class="color_lbrown_hover vc_child">
                                 <span class="d_inline_m">
@@ -128,7 +128,7 @@
                             </a>
                         </li>
                         
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </div>

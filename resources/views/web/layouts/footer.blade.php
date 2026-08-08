@@ -140,9 +140,9 @@
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Information</h5>
                         <hr class="divider_bg m_bottom_25">
                         <ul class="second_font vr_list_type_1 with_links">
-                            <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
+                            <li class="m_bottom_14"><a href="{{ route('about-us') }}" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>About us</a></li>
-                            <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
+                            <li class="m_bottom_14"><a href="{{ route('products') }}" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>Our Products</a></li>
                             <!-- <li class="m_bottom_14"><a href="#" class="sc_hover d_inline_b"><i
                                         class="fa fa-caret-right"></i>Best sellers</a></li>
