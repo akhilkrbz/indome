@@ -81,9 +81,9 @@
                             </div>
                         </div>
                         <!--searchform-->
-                        <form role="search" class="relative f_right f_xs_none m_right_3 db_xs_centered button_in_input">
-                            <input type="text" name="" tabindex="1" placeholder="Search"
-                                class="fs_medium color_light fw_light w_full tr_all">
+                        <form role="search" class="relative f_right f_xs_none m_right_3 db_xs_centered button_in_input" action="{{ route('products') }}">
+                            <input type="text" name="search" tabindex="1" placeholder="Search"
+                                class="fs_medium color_light fw_light w_full tr_all" value="{{ request()->get('search') }}">
                             <button class="color_dark tr_all color_lbrown_hover"><i
                                     class="fa fa-search d_inline_m"></i></button>
                         </form>
