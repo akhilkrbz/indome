@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,4 +88,3 @@
 
 </body>
 </html>
-```
