@@ -148,9 +148,8 @@
         </div>
     </section>
 
-    
     <!--tabs-->
-    @include('web.home.includes.products-list')
+    @include('web.home.includes.products-portfolio')
     
 
     <div class="section_offset bg_grey_light_2 d-none">

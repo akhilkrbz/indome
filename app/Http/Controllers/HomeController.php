@@ -30,7 +30,7 @@ class HomeController extends Controller
             });
         }
 
-        $list = $list->limit(4)->get();
+        $list = $list->limit(10)->get();
 
         return view('web/home/index', compact('list', 'search'));
     }
