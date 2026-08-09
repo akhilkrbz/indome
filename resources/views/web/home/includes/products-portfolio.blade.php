@@ -64,5 +64,13 @@
             @endforeach
             
         </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <center>
+                <a href="{{ route('products') }}" class="button_type_2 lbrown state_2 tr_all second_font fs_medium tt_uppercase">
+                    View More Products
+                </a>
+            </center>
+        </div>
     </main>
 </div>
