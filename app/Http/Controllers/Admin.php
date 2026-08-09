@@ -87,7 +87,7 @@ class Admin extends Controller
             });
         }
 
-        $list = $list->paginate(10);
+        $list = $list->paginate(20);
 
         return view('admin/products/list', compact('list', 'search'));
     }
