@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
@@ -41,7 +43,11 @@ class AuthController extends Controller
         session()->put('main_page', 'Indome Furnitures Dashboard');
         session()->put('sub_page', '');
 
-        return view('admin.dashboard');
+        $total_products = Product::count();
+        $product_enqs = DB::table('contact_us')->whereNotNull('product_id')->count();
+        $other_enqs = DB::table('contact_us')->whereNull('product_id')->count();
+
+        return view('admin.dashboard', compact('total_products', 'product_enqs', 'other_enqs'));
     }
 
     public function logout(Request $request)
