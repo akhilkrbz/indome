@@ -21,7 +21,7 @@ class HomeController extends Controller
 
         $search = request()->input('search') ?? '';
 
-        $list = Product::with(['images', 'category', 'sub_category'])->orderBy('id', 'desc');
+        $list = Product::whereHas('images')->with(['images', 'category', 'sub_category'])->orderBy('id', 'desc');
 
         if($search != "") {
             $list = $list->where(function($query) use ($search) {
