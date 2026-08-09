@@ -20,8 +20,9 @@
                         @csrf
                         <div class="row g-3 align-items-end">
                             <div class="col-md-6">
-                                <label for="image" class="form-label">Upload New Image</label>
-                                <input type="file" name="image" id="image" class="form-control" required>
+                                <label for="image" class="form-label">Upload New Images</label>
+                                <input type="file" name="image[]" id="image" class="form-control" multiple required>
+                                <small class="text-muted">You can select multiple images at once.</small>
                             </div>
                             <div class="col-md-2">
                                 <button type="submit" class="btn btn-primary">Upload</button>

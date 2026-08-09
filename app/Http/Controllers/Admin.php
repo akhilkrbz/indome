@@ -374,29 +374,31 @@ class Admin extends Controller
     public function productImageStore(Request $request, $id)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'image' => 'required|array',
+            'image.*' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
         ]);
 
         $product = Product::findOrFail($id);
 
-        $file = $request->file('image');
-        $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
-        $extension = $file->getClientOriginalExtension();
-        $safeBaseName = preg_replace('/[^A-Za-z0-9._-]+/', '_', $originalFilename);
-        $filename = $safeBaseName . '_' . uniqid() . '.' . $extension; // keep uniqid to avoid overwrites
+        foreach ($request->file('image') as $file) {
+            $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+            $extension = $file->getClientOriginalExtension();
+            $safeBaseName = preg_replace('/[^A-Za-z0-9._-]+/', '_', $originalFilename);
+            $filename = $safeBaseName . '_' . uniqid() . '.' . $extension; // keep uniqid to avoid overwrites
 
-        // Store under storage/app/public instead of public/
-        $path = $file->storeAs("products/{$id}", $filename, 'public');
+            // Store under storage/app/public instead of public/
+            $path = $file->storeAs("products/{$id}", $filename, 'public');
 
-        DB::table('product_images')->insert([
-            'product_id' => $product->id,
-            'filename' => $filename,
-            'created_at' => now(),
-            'created_by' => auth()->id(),
-        ]);
+            DB::table('product_images')->insert([
+                'product_id' => $product->id,
+                'filename' => $filename,
+                'created_at' => now(),
+                'created_by' => auth()->id(),
+            ]);
+        }
 
         return redirect()->route('products.images.list', $product->id)
-            ->with('success', 'Image uploaded successfully.');
+            ->with('success', 'Images uploaded successfully.');
     }
 
     public function productImageDelete($productId, $imageId)
