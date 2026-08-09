@@ -50,7 +50,7 @@
                 
             </div><!--end row-->
 
-            {{ $list->links() }}
+            {{ $list->appends(request()->query())->links() }}
 
         </div>
     </div>

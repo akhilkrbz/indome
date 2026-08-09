@@ -111,6 +111,7 @@ class HomeController extends Controller
         }
 
         $list = $list->paginate(9);
+        $list->appends($request->except('page'));
 
         $categories = Category::with('sub_categories')->get();
 
