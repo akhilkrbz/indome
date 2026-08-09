@@ -20,7 +20,7 @@
 
                             @php
                                 $firstImage = $item->images->first();
-                                $imageSrc = $firstImage ? asset('uploads/products/' . $item->id . '/' . $firstImage->filename) : asset('assets/images/products/01.png');
+                                $imageSrc = $firstImage ? asset('storage/products/' . $item->id . '/' . $firstImage->filename) : asset('assets/images/products/01.png');
                             @endphp
 
 
@@ -92,7 +92,7 @@
                             @if($key >= 2)
                             @php
                                 $firstImage = $item->images->first();
-                                $imageSrc = $firstImage ? asset('uploads/products/' . $item->id . '/' . $firstImage->filename) : asset('assets/images/products/01.png');
+                                $imageSrc = $firstImage ? asset('storage/products/' . $item->id . '/' . $firstImage->filename) : asset('assets/images/products/01.png');
                             @endphp
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 w_mxs_full m_xs_bottom_30 animated hidden"
                                 data-animation="fadeInDown">

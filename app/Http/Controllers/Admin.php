@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class Admin extends Controller
 {
@@ -338,7 +339,7 @@ class Admin extends Controller
         return view('admin/products/product-details', compact('product', 'images', 'variants'));
     }
 
-    public function productImageStore(Request $request, $id)
+    public function productImageStoreOld(Request $request, $id)
     {
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
@@ -350,14 +351,14 @@ class Admin extends Controller
         }
 
         $file = $request->file('image');
-        $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
-        $destinationPath = public_path('uploads/products/' . $id);
 
-        if (!is_dir($destinationPath)) {
-            mkdir($destinationPath, 0755, true);
-        }
+        // $filename = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+        $originalFilename = $file->getClientOriginalName();
+        $extension = $file->getClientOriginalExtension();
+        $safeBaseName = preg_replace('/[^A-Za-z0-9._-]+/', '_', pathinfo($originalFilename, PATHINFO_FILENAME));
+        $filename = $safeBaseName . '.' . $extension;
 
-        $file->move($destinationPath, $filename);
+        $path = $file->storeAs("products/{$id}", $filename, 'public');
 
         DB::table('product_images')->insert([
             'product_id' => $product->id,
@@ -367,6 +368,35 @@ class Admin extends Controller
         ]);
 
         return redirect()->route('products.images.list', $product->id)->with('success', 'Image uploaded successfully.');
+    }
+
+
+    public function productImageStore(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+        ]);
+
+        $product = Product::findOrFail($id);
+
+        $file = $request->file('image');
+        $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+        $extension = $file->getClientOriginalExtension();
+        $safeBaseName = preg_replace('/[^A-Za-z0-9._-]+/', '_', $originalFilename);
+        $filename = $safeBaseName . '_' . uniqid() . '.' . $extension; // keep uniqid to avoid overwrites
+
+        // Store under storage/app/public instead of public/
+        $path = $file->storeAs("products/{$id}", $filename, 'public');
+
+        DB::table('product_images')->insert([
+            'product_id' => $product->id,
+            'filename' => $filename,
+            'created_at' => now(),
+            'created_by' => auth()->id(),
+        ]);
+
+        return redirect()->route('products.images.list', $product->id)
+            ->with('success', 'Image uploaded successfully.');
     }
 
     public function productImageDelete($productId, $imageId)
@@ -385,9 +415,9 @@ class Admin extends Controller
             return redirect()->route('products.images.list', $product->id)->with('error', 'Image not found.');
         }
 
-        $imagePath = public_path('uploads/products/' . $product->id . '/' . $image->filename);
-        if (file_exists($imagePath)) {
-            unlink($imagePath);
+        $imagePath = 'products/' . $product->id . '/' . $image->filename;
+        if (Storage::disk('public')->exists($imagePath)) {
+            Storage::disk('public')->delete($imagePath);
         }
 
         DB::table('product_images')->where('id', $imageId)->delete();

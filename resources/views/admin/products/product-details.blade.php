@@ -15,7 +15,7 @@
                             $mainImage = $images->first();
                         @endphp
                         @if($mainImage)
-                            <img id="main-product-image" src="{{ asset('uploads/products/' . $product->id . '/' . $mainImage->filename) }}" class="img-fluid" alt="{{ $product->name }}" style="width: 100%; max-height: 420px; object-fit: cover;">
+                            <img id="main-product-image" src="{{ asset('storage/products/' . $product->id . '/' . $mainImage->filename) }}" class="img-fluid" alt="{{ $product->name }}" style="width: 100%; max-height: 420px; object-fit: cover;">
                         @else
                             <img id="main-product-image" src="{{ asset('assets/images/products/01.png') }}" class="img-fluid" alt="{{ $product->name }}">
                         @endif
@@ -23,7 +23,7 @@
                         <div class="row mb-3 row-cols-auto g-2 justify-content-center mt-3">
                             @foreach($images as $image)
                                 <div class="col">
-                                    <img src="{{ asset('uploads/products/' . $product->id . '/' . $image->filename) }}" width="70" class="border rounded cursor-pointer thumbnail-image" alt="{{ $product->name }}" style="height: 70px; object-fit: cover;" data-full-image="{{ asset('uploads/products/' . $product->id . '/' . $image->filename) }}">
+                                    <img src="{{ asset('storage/products/' . $product->id . '/' . $image->filename) }}" width="70" class="border rounded cursor-pointer thumbnail-image" alt="{{ $product->name }}" style="height: 70px; object-fit: cover;" data-full-image="{{ asset('storage/products/' . $product->id . '/' . $image->filename) }}">
                                 </div>
                             @endforeach
                         </div>

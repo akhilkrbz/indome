@@ -33,7 +33,7 @@
                         @forelse($images as $image)
                             <div class="col">
                                 <div class="card h-100">
-                                    <img src="{{ asset('uploads/products/' . $product->id . '/' . $image->filename) }}" class="card-img-top" alt="Product image" style="height: 220px; object-fit: cover;">
+                                    <img src="{{ asset('storage/products/' . $product->id . '/' . $image->filename) }}" class="card-img-top" alt="Product image" style="height: 220px; object-fit: cover;">
                                     <div class="card-body">
                                         <p class="mb-0 text-muted">{{ $image->filename }}</p>
                                         <form action="{{ route('products.image.delete', ['productId' => $product->id, 'imageId' => $image->id]) }}" method="POST" class="mt-3">

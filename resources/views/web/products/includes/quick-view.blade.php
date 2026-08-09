@@ -1,7 +1,7 @@
 @foreach($list as $key => $item)
 @php
     $firstImage = $item->images->first();
-    $imageSrc = $firstImage ? asset('uploads/products/' . $item->id . '/' . $firstImage->filename) : asset('assets/images/products/01.png');
+    $imageSrc = $firstImage ? asset('storage/products/' . $item->id . '/' . $firstImage->filename) : asset('assets/images/products/01.png');
 @endphp
 
 <div class="init_popup" id="quick_view_{{ $item->id }}">
