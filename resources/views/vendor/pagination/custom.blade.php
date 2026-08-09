@@ -1,4 +1,13 @@
 @if ($paginator->hasPages())
+    @php
+        $currentPage = $paginator->currentPage();
+        $lastPage = $paginator->lastPage();
+        $startPage = max(1, min($currentPage - 2, max(1, $lastPage - 4)));
+        $endPage = min($lastPage, $startPage + 4);
+        $startPage = max(1, $endPage - 4);
+        $pageRange = $paginator->getUrlRange($startPage, $endPage);
+    @endphp
+
     <nav class="d_inline_b">
         <ul class="hr_list">
             {{-- Previous Page Link --}}
@@ -17,31 +26,19 @@
                 </li>
             @endif
 
-            @foreach ($elements as $element)
-                @if (is_string($element))
+            @foreach ($pageRange as $page => $url)
+                @if ($page == $paginator->currentPage())
                     <li class="m_right_3">
-                        <span class="button_type_4 tr_delay grey state_2 d_block vc_child t_align_c">
-                            <span class="d_inline_m fs_small">{{ $element }}</span>
+                        <span aria-current="page" class="button_type_4 tr_delay grey state_2 d_block vc_child t_align_c border_black">
+                            <span class="d_inline_m fs_small">{{ $page }}</span>
                         </span>
                     </li>
-                @endif
-
-                @if (is_array($element))
-                    @foreach ($element as $page => $url)
-                        @if ($page == $paginator->currentPage())
-                            <li class="m_right_3">
-                                <span aria-current="page" class="button_type_4 tr_delay grey state_2 d_block vc_child t_align_c border_black">
-                                    <span class="d_inline_m fs_small">{{ $page }}</span>
-                                </span>
-                            </li>
-                        @else
-                            <li class="m_right_3">
-                                <a href="{{ $url }}" class="button_type_4 tr_delay grey state_2 d_block vc_child t_align_c">
-                                    <span class="d_inline_m fs_small">{{ $page }}</span>
-                                </a>
-                            </li>
-                        @endif
-                    @endforeach
+                @else
+                    <li class="m_right_3">
+                        <a href="{{ $url }}" class="button_type_4 tr_delay grey state_2 d_block vc_child t_align_c">
+                            <span class="d_inline_m fs_small">{{ $page }}</span>
+                        </a>
+                    </li>
                 @endif
             @endforeach
 

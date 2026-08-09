@@ -50,10 +50,10 @@
                                         <img src="{{ $imageSrc }}" alt="" class="c_image_1 tr_all" height="263" width="263">
                                         <img src="{{ $imageSrc }}" alt="" class="c_image_2 tr_all" height="263" width="263">
                                     </div>
-                                    <div
+                                    <!-- <div
                                         class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase">
                                         <i class="d_inline_m">Sale!</i>
-                                    </div>
+                                    </div> -->
                                     
                                 </div>
                                 <figcaption class="bg_white relative p_bottom_0">
