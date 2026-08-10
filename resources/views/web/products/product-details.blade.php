@@ -11,8 +11,8 @@
                             <div class="wrapper">
                                 <div class="d_block relative r_image_container">
                                     @if(count($images) > 0)
-                                    <img id="zoom" src="{{ asset('storage/products/' . $product->id . '/' . $images->first()->filename) }}" alt=""
-                                        data-zoom-image="{{ asset('storage/products/' . $product->id . '/' . $images->first()->filename) }}">
+                                    <img id="zoom" src="{{ route('product.image', ['product' => $product->id, 'filename' => $images->first()->filename]) }}" alt=""
+                                        data-zoom-image="{{ route('product.image', ['product' => $product->id, 'filename' => $images->first()->filename]) }}">
                                     @else
                                     <img id="zoom" src="{{ asset('web/images/no-image.jpg') }}" alt="No Image Available"
                                         data-zoom-image="{{ asset('web/images/no-image.jpg') }}">
@@ -45,9 +45,9 @@
                                                         "URLhashListener" : false
                                                     }'>
                                         @foreach($images as $image)
-                                        <a href="#" data-image="{{ asset('storage/products/' . $product->id . '/' . $image->filename) }}"
-                                            data-zoom-image="{{ asset('storage/products/' . $product->id . '/' . $image->filename) }}" class="d_block">
-                                            <img src="{{ asset('storage/products/' . $product->id . '/' . $image->filename) }}" alt="">
+                                        <a href="#" data-image="{{ route('product.image', ['product' => $product->id, 'filename' => $image->filename]) }}"
+                                            data-zoom-image="{{ route('product.image', ['product' => $product->id, 'filename' => $image->filename]) }}" class="d_block">
+                                            <img src="{{ route('product.image', ['product' => $product->id, 'filename' => $image->filename]) }}" alt="">
                                         </a>
                                         @endforeach
                                         
@@ -348,7 +348,7 @@
             <div class="product_preview f_left f_xs_none wrapper m_xs_bottom_15">
                 <div class="d_block relative r_image_container">
                     @if(count($images) > 0)
-                    <img id="zoom" src="{{ asset('storage/products/' . $product->id . '/' . $images->first()->filename) }}" alt="" data-zoom-image="{{ asset('storage/products/' . $product->id . '/' . $images->first()->filename) }}">
+                    <img id="zoom" src="{{ route('product.image', ['product' => $product->id, 'filename' => $images->first()->filename]) }}" alt="" data-zoom-image="{{ route('product.image', ['product' => $product->id, 'filename' => $images->first()->filename]) }}">
                     <div class="product_label fs_ex_small circle color_white bg_lbrown t_align_c vc_child tt_uppercase"><i class="d_inline_m">Sale!</i></div>
                     @else
                     <img id="zoom" src="{{ asset('web/images/no-image.jpg') }}" alt="No Image Available" data-zoom-image="{{ asset('web/images/no-image.jpg') }}">

@@ -17,7 +17,7 @@
                     <div class="card">
                         @php
                             $firstImage = $item->images->first();
-                            $imageSrc = $firstImage ? asset('storage/products/' . $item->id . '/' . $firstImage->filename) : asset('assets/images/products/01.png');
+                            $imageSrc = $firstImage ? route('product.image', ['product' => $item->id, 'filename' => $firstImage->filename]) : asset('assets/images/products/01.png');
                         @endphp
                         <img src="{{ $imageSrc }}" class="card-img-top" alt="{{ $item->name }}" style="height: 220px; object-fit: cover;">
                         <!-- <div class="">
