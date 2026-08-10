@@ -40,6 +40,12 @@
                                     <!-- <a href="{{ route('products.add.variants', $item->id) }}"><button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Add Variants"><i class='bx bxs-book-add text-dark'></i></button></a> -->
                                     <a href="{{ route('products.variants.list', $item->id) }}"><button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="View Variants"><i class='bx bxs-package text-success'></i></button></a>
                                     <a href="{{ route('products.images.list', $item->id) }}"><button type="button" class="btn btn-sm"  data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Manage Images"><i class='bx bxs-image text-info'></i></button></a>
+                                    <form action="{{ route('products.featured.toggle', $item->id) }}" method="POST" class="d-inline">
+                                        @csrf
+                                        <button type="submit" class="btn btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="{{ $item->featured == 1 ? 'Remove from featured' : 'Mark as featured' }}">
+                                            <i class="{{ $item->featured == 1 ? 'bx bxs-star text-warning' : 'bx bx-star text-secondary' }}"></i>
+                                        </button>
+                                    </form>
                                 </div>
                                 <!-- <p class="mb-0 ms-auto">4.2(182)</p> -->
                             </div>

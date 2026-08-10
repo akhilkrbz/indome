@@ -149,7 +149,9 @@
     </section>
 
     <!--tabs-->
+    @if($list->count() > 0)
     @include('web.home.includes.products-portfolio')
+    @endif
     
 
     <div class="section_offset bg_grey_light_2 d-none">

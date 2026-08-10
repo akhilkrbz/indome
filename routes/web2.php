@@ -30,6 +30,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/product-image-store/{id}', [Admin::class, 'productImageStore'])->name('products.image.store');
     Route::delete('/product-image-delete/{productId}/{imageId}', [Admin::class, 'productImageDelete'])->name('products.image.delete');
     Route::get('/product-details/{id}', [Admin::class, 'productDetails'])->name('products.details');
+    Route::post('/product-featured-toggle/{id}', [Admin::class, 'productFeaturedToggle'])->name('products.featured.toggle');
     Route::get('/product-enquiries', [Admin::class, 'productEnquiries'])->name('product-enquiries');
 
     

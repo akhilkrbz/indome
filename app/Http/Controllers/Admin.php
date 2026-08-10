@@ -484,6 +484,24 @@ class Admin extends Controller
         return redirect()->route('products.images.list', $product->id)->with('success', 'Image deleted successfully.');
     }
 
+    public function productFeaturedToggle($id)
+    {
+        $product = Product::find($id);
+
+        if (!$product) {
+            return redirect()->route('products.list')->with('error', 'Product not found.');
+        }
+
+        $product->featured = ($product->featured == 1) ? 0 : 1;
+        $product->updated_at = now();
+        $product->updated_by = auth()->user()->id;
+        $product->save();
+
+        return redirect()->back()->with('success', ($product->featured == 1)
+            ? 'Product marked as featured.'
+            : 'Product removed from featured.');
+    }
+
     public function productEnquiries()
     {
         session()->put('main_page', 'Indome Furnitures ');
