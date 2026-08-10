@@ -371,7 +371,7 @@ class Admin extends Controller
     }
 
 
-    public function productImageStore(Request $request, $id)
+    public function productImageStore_old2(Request $request, $id)
     {
         $request->validate([
             'image' => 'required|array',
@@ -400,6 +400,63 @@ class Admin extends Controller
         return redirect()->route('products.images.list', $product->id)
             ->with('success', 'Images uploaded successfully.');
     }
+    
+    
+
+    public function productImageStore(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'required|array',
+            'image.*' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+        ]);
+
+        $product = Product::findOrFail($id);
+
+        // Store directly in the root storage folder
+        // $storagePath = storage_path("products/{$id}");
+
+        $storagePath = base_path(env('PRODUCT_STORAGE_PATH') . '/' . $id);
+
+        // Create directory if it doesn't exist
+        if (!file_exists($storagePath)) {
+            mkdir($storagePath, 0777, true);
+        }
+
+        foreach ($request->file('image') as $file) {
+
+            $originalFilename = pathinfo(
+                $file->getClientOriginalName(),
+                PATHINFO_FILENAME
+            );
+
+            $extension = $file->getClientOriginalExtension();
+
+            $safeBaseName = preg_replace(
+                '/[^A-Za-z0-9._-]+/',
+                '_',
+                $originalFilename
+            );
+
+            $filename = $safeBaseName . '_' . uniqid() . '.' . $extension;
+
+            // Move file to:
+            // storage/products/{product_id}/
+            $file->move($storagePath, $filename);
+
+            DB::table('product_images')->insert([
+                'product_id' => $product->id,
+                'filename' => $filename,
+                'created_at' => now(),
+                'created_by' => auth()->id(),
+            ]);
+        }
+
+        return redirect()
+            ->route('products.images.list', $product->id)
+            ->with('success', 'Images uploaded successfully.');
+    }
+
+
 
     public function productImageDelete($productId, $imageId)
     {
@@ -438,5 +495,21 @@ class Admin extends Controller
         ->whereNotNull('product_id')->orderBy('id', 'desc')->paginate(10);
 
         return view('admin/product-enquiries', compact('list'));
+    }
+
+
+    public function productImage($product, $filename)
+    {
+        $filename = basename($filename);
+
+        $path = base_path(
+            '../shared/storage/products/' . $product . '/' . $filename
+        );
+
+        if (!file_exists($path)) {
+            abort(404);
+        }
+
+        return response()->file($path);
     }
 }

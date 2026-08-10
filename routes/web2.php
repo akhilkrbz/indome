@@ -32,5 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/product-details/{id}', [Admin::class, 'productDetails'])->name('products.details');
     Route::get('/product-enquiries', [Admin::class, 'productEnquiries'])->name('product-enquiries');
 
+    Route::get('/product-image/{product}/{filename}',[Admin::class, 'productImage'])->where('filename', '.*')->name('product.image');
+
 });
 

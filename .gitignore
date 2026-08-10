@@ -20,7 +20,9 @@
 /public/uploads
 /storage/*.key
 /storage/pail
+/storage/products/
 /vendor
+/shared/
 Homestead.json
 Homestead.yaml
 Thumbs.db
