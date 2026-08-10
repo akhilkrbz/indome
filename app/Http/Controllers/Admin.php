@@ -415,7 +415,7 @@ class Admin extends Controller
         // Store directly in the root storage folder
         // $storagePath = storage_path("products/{$id}");
 
-        $storagePath = base_path(env('PRODUCT_STORAGE_PATH') . '/' . $id);
+        $storagePath = env('PRODUCT_STORAGE_PATH') . '/' . $id;
 
         // Create directory if it doesn't exist
         if (!file_exists($storagePath)) {
