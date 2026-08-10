@@ -100,9 +100,9 @@
                             <hr class="divider_light m_bottom_15">
                             <p class="fw_light m_bottom_14 color_grey">{{ $product->description }}</p>
                             <div class="product_options m_bottom_20">
-                                <b class="second_font d_block m_bottom_10">Available Options</b>
-                                <p class="second_font m_bottom_3">Size:</p>
-                                <div class="styled_select size_select relative m_bottom_15">
+                                <b class="second_font d_block m_bottom_10  d-none">Available Options</b>
+                                <p class="second_font m_bottom_3  d-none">Size:</p>
+                                <div class="styled_select size_select relative m_bottom_15  d-none">
                                     <div class="select_title type_2 fs_medium fw_light color_light relative d_none tr_all">
                                         Queen</div>
                                     <select>
@@ -112,8 +112,8 @@
                                     </select>
                                     <ul class="options_list d_none tr_all hidden bg_grey_light_2"></ul>
                                 </div>
-                                <p class="second_font">Color:</p>
-                                <ul class="hr_list m_bottom_17">
+                                <p class="second_font  d-none">Color:</p>
+                                <ul class="hr_list m_bottom_17  d-none">
                                     <li class="m_right_5 m_bottom_3"><button
                                             class="color_button bg_light_red tr_all"></button></li>
                                     <li class="m_right_5 m_bottom_3"><button
@@ -128,10 +128,10 @@
                                 @include('web.layouts.alerts')
                                 <hr class="divider_light">
                                 <footer class="bg_grey_light_2">
-                                    <div class="fs_big second_font m_bottom_17"><s class="color_light">$1 302.00</s> <b
+                                    <div class="fs_big second_font m_bottom_17  d-none"><s class="color_light">$1 302.00</s> <b
                                             class="scheme_color">$1 102.00</b></div>
                                     <div class="clearfix">
-                                        <div class="quantity clearfix t_align_c f_left f_md_none m_right_10 m_md_bottom_3">
+                                        <div class="quantity clearfix t_align_c f_left f_md_none m_right_10 m_md_bottom_3  d-none">
                                             <button class="f_left d_block minus black_hover tr_all bg_white">-</button>
                                             <input type="text" value="1" name="" readonly="" class="f_left color_light">
                                             <button class="f_left d_block black_hover tr_all bg_white">+</button>
@@ -183,7 +183,7 @@
                     </div>
                 </main>
                 <!--tabs-->
-                <div class="tabs styled_tabs m_bottom_18 m_top_10">
+                <div class="tabs styled_tabs m_bottom_18 m_top_10  d-none">
                     <nav class="second_font">
                         <ul class="hr_list">
                             <li class="m_right_3"><a href="#tab1" class="color_light border_light_3 d_block">Description</a>
