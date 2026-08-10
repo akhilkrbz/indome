@@ -653,7 +653,6 @@
 					},
 
 					openPopup : function(event){
-						if($(window).width() < 768) return false;
 						var p = $(event.data.p),
 							obj = event.data.object;
 						p.fadeIn(obj.config.speed,function(){

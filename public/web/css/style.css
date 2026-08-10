@@ -4184,9 +4184,45 @@ input[type="radio"] + label::after{
 
 	}
 
-	#enquiry_modal{
+	#enquiry_modal > .popup{
 
-		display: none !important;
+		width:calc(100% - 30px);
+
+		max-width:840px;
+
+		padding:25px 15px;
+
+		max-height:calc(100vh - 30px);
+
+		overflow-y:auto;
+
+		-webkit-overflow-scrolling:touch;
+
+	}
+
+	#enquiry_modal .product_description{
+
+		width:100% !important;
+
+	}
+
+	#enquiry_modal .product_preview{
+
+		display:none;
+
+	}
+
+	#enquiry_modal .product_options {
+
+		padding:12px 12px 0;
+
+	}
+
+	#enquiry_modal .product_options button[type="submit"]{
+
+		display:inline-block;
+
+		width:auto;
 
 	}
 
