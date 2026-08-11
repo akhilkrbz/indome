@@ -74,13 +74,12 @@
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
-                                Special Offer
+                                Your Choice
                             </div>
                             <div class="caption_inner">
-                                <h3 class="color_white second_font fw_light m_bottom_5 fs_sm_default">Your Bedroom Lives
-                                    Here</h3>
-                                <p class="color_light fw_light color_light_2">Donec sit amet eros. Lorem ipsum. <a href="#"
-                                        class="color_lbrown color_white_hover">Buy Now!</a></p>
+                                <h3 class="color_white second_font fw_light m_bottom_5 fs_sm_default">Your Space, Your Choice</h3>
+                                <p class="color_light fw_light color_light_2">Choose What Feels Like You. <a href="{{ route('contact-us') }}"
+                                        class="color_lbrown color_white_hover">Contact Now!</a></p>
                             </div>
                         </figcaption>
                     </figure>
@@ -105,7 +104,7 @@
                             </div>
                             <div class="caption_inner">
                                 <h3 class="color_white second_font fw_light m_bottom_5 fs_sm_default">Relax &amp; Work</h3>
-                                <p class="color_light fw_light color_light_2">Mauris fermentum dictum magna. <a href="#"
+                                <p class="color_light fw_light color_light_2">Where Comfort Meets Productivity. <a href="{{ route('contact-us') }}"
                                         class="color_lbrown color_white_hover">More info</a></p>
                             </div>
                         </figcaption>
@@ -113,19 +112,12 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <!--banner-->
-                    <div class="banner_type_2 color_lbrown m_bottom_30">
-                        <div class="bg_lbrown inner color_white t_align_c">
-                            <h1 class="second_font fw_light m_bottom_10">Newsletter Sign Up</h1>
-                            <p class="fw_light m_bottom_15">Get exclusive deals you will not find anywhere else straight to
-                                your inbox!</p>
-                            <!--newsletter form-->
-                            <form class="newsletter relative color_default button_in_input">
-                                <input type="email" placeholder="Enter your email address" name="newsletter-email"
-                                    class="w_full fs_medium fw_light b_none">
-                                <button class="color_dark tr_all color_lbrown_hover"><i
-                                        class="fa fa-envelope d_inline_m"></i></button>
-                            </form>
-                        </div>
+                    <div class="banner_type_2 m_bottom_30">
+                        <!-- <div class="inner color_white t_align_c"> -->
+                            <figure class="relative wrapper scale_image_container r_image_container">
+                            <img src="{{ asset('web/images/home/home4.jpg') }}" alt="" class="tr_all scale_image">
+                        </figure>
+                        <!-- </div> -->
                     </div>
                     <!--banner-->
                     <figure class="relative wrapper scale_image_container r_image_container">
@@ -138,11 +130,13 @@
                             <div class="caption_inner">
                                 <h3 class="color_white second_font fw_light m_bottom_5 fs_sm_default">Liven Up Your Room
                                 </h3>
-                                <p class="color_light fw_light color_light_2">Mauris fermentum dictum magna. <a href="#"
-                                        class="color_lbrown color_white_hover">Click Here</a></p>
+                                <p class="color_light fw_light color_light_2">Bring Your Room to Life <a href="{{ route('contact-us') }}"
+                                        class="color_lbrown color_white_hover">Contact Now!</a></p>
                             </div>
                         </figcaption>
                     </figure>
+
+                    
                 </div>
             </div>
         </div>
