@@ -3,103 +3,18 @@
     <div class="section_offset bg_grey_light_2 m_bottom_38">
         <div class="container m_bottom_13 m_top_10">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-8 m_xs_bottom_30">
-                    <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Latest Tweets</h5>
-                    <hr class="divider_bg m_bottom_10">
-                    <!--twitter feed-->
-                    <div class="tweets_list_container"></div>
+                <div class="col-lg-8 col-md-8 col-sm-8 m_xs_bottom_30 d-none">
+                    
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
-                    <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Stay Connected</h5>
-                    <hr class="divider_bg m_bottom_30">
-                    <!--social buttons-->
-                    <ul class="hr_list">
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="https://www.facebook.com/IndoMeFurnitures/" target="_blank"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-facebook fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Facebook</span></a>
-                        </li>
-                        <!-- <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-twitter fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Twitter</span></a>
-                        </li>
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-google-plus fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Google Plus</span></a>
-                        </li>
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-rss fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">RSS</span></a>
-                        </li>
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-pinterest fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Pinterest</span></a>
-                        </li> -->
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="https://www.instagram.com/indomefurnitures?igsh=MW5hbnBuNTk3Z293cg=="
-                                target="_blank"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-instagram fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Instagram</span></a>
-                        </li>
-                        <!-- <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-linkedin fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">LinkedIn</span></a>
-                        </li>
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-vimeo-square fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Vimeo</span></a>
-                        </li>
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-youtube-play fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Youtube</span></a>
-                        </li>
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="#"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-flickr fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Flickr</span></a>
-                        </li> -->
-                        <li class="m_right_3 m_bottom_3">
-                            <a href="{{ route('contact-us') }}"
-                                class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
-                                    class="fa fa-envelope fs_large d_inline_m"></i><span
-                                    class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
-                                    data-hide="fadeOutUp">Contact Us</span></a>
-                        </li>
-                    </ul>
+                    
                 </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4">
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8 m_bottom_13 m_sm_bottom_30">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">About Us</h5>
@@ -134,7 +49,7 @@
                     </div> -->
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Information</h5>
@@ -167,6 +82,43 @@
                         </iframe>
 
                     </div> -->
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_13 m_sm_bottom_30">
+                        <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Stay Connected</h5>
+                        <hr class="divider_bg m_bottom_30">
+                        <!--social buttons-->
+                        <ul class="hr_list">
+                            <li class="m_right_3 m_bottom_3">
+                                <a href="https://www.facebook.com/IndoMeFurnitures/" target="_blank"
+                                    class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
+                                        class="fa fa-facebook fs_large d_inline_m"></i><span
+                                        class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
+                                        data-hide="fadeOutUp">Facebook</span></a>
+                            </li>
+                            
+                            <li class="m_right_3 m_bottom_3">
+                                <a href="https://www.instagram.com/indomefurnitures?igsh=MW5hbnBuNTk3Z293cg=="
+                                    target="_blank"
+                                    class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
+                                        class="fa fa-instagram fs_large d_inline_m"></i><span
+                                        class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
+                                        data-hide="fadeOutUp">Instagram</span></a>
+                            </li>
+                            
+                            <li class="m_right_3 m_bottom_3">
+                                <a href="{{ route('contact-us') }}"
+                                    class="button_type_6 d_block grey state_2 tr_delay color_dark t_align_c vc_child tooltip_container relative"><i
+                                        class="fa fa-envelope fs_large d_inline_m"></i><span
+                                        class="tooltip top fs_small color_white hidden animated" data-show="fadeInDown"
+                                        data-hide="fadeOutUp">Contact Us</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
         </div>

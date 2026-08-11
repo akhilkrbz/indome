@@ -11,96 +11,42 @@
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Categories</h5>
                         <hr class="divider_bg m_bottom_23">
                         <ul class="categories_list second_font w_break">
-                            <li class="relative"><a href="#" class="fs_large_0 d_inline_b tr_delay">Living Rooms</a><button
-                                    class="open_sub_categories fs_medium"></button>
+                            
+
+                            @foreach($categories as $ck => $category)
+                            @if($ck < 7)
+                            <li class="relative"><a href="{{ route('products', ['category' => $category->id]) }}" class="fs_large_0 d_inline_b">{{ $category->category_name }}</a>
+                                @if($category->sub_categories->isNotEmpty())
+                                <button class="open_sub_categories fs_medium"></button>
                                 <!--second level-->
                                 <ul class="d_none">
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Beds</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Dressers/Chests</a><button
-                                            class="open_sub_categories fs_medium"></button>
-                                        <!--third level-->
-                                        <ul class="d_none fs_small categories_third_level_list">
-                                            <li><a href="#" class="tr_delay sc_hover bg_grey_light_2_hover">King Beds</a>
-                                            </li>
-                                            <li><a href="#" class="sc_hover bg_grey_light_2_hover tr_delay">Queen Beds</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Nightstands</a></li>
+                                    @foreach($category->sub_categories as $subCategory)
+                                    <li class="relative"><a href="{{ route('products', ['category' => $category->id, 'subcategory' => $subCategory->id]) }}" class="tr_delay d_inline_b">{{ $subCategory->sub_category_name }}</a></li>
+                                    @endforeach
                                 </ul>
+                                @endif
                             </li>
-                            <li class="relative"><a href="#" class="fs_large_0 d_inline_b tr_delay">Bedrooms</a><button
-                                    class="open_sub_categories fs_medium"></button>
-                                <!--second level-->
-                                <ul class="d_none">
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Beds</a><button
-                                            class="open_sub_categories fs_medium"></button>
-                                        <!--third level-->
-                                        <ul class="d_none fs_small categories_third_level_list">
-                                            <li><a href="#" class="tr_delay sc_hover bg_grey_light_2_hover">King Beds</a>
-                                            </li>
-                                            <li><a href="#" class="sc_hover bg_grey_light_2_hover tr_delay">Queen Beds</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Dressers/Chests</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Nightstands</a></li>
-                                </ul>
-                            </li>
-                            <li class="relative"><a href="#" class="fs_large_0 d_inline_b tr_delay">Dining Rooms</a><button
-                                    class="open_sub_categories fs_medium"></button>
-                                <!--second level-->
-                                <ul class="d_none">
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Beds</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Dressers/Chests</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Nightstands</a></li>
-                                </ul>
-                            </li>
-                            <li class="relative"><a href="#" class="fs_large_0 d_inline_b tr_delay">Kids Rooms</a><button
-                                    class="open_sub_categories fs_medium"></button>
-                                <!--second level-->
-                                <ul class="d_none">
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Beds</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Dressers/Chests</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Nightstands</a></li>
-                                </ul>
-                            </li>
-                            <li class="relative"><a href="#" class="fs_large_0 d_inline_b tr_delay">New</a><button
-                                    class="open_sub_categories fs_medium"></button>
-                                <!--second level-->
-                                <ul class="d_none">
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Beds</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Dressers/Chests</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Nightstands</a></li>
-                                </ul>
-                            </li>
-                            <li class="relative"><a href="#" class="fs_large_0 d_inline_b tr_delay">Sale</a><button
-                                    class="open_sub_categories fs_medium"></button>
-                                <!--second level-->
-                                <ul class="d_none">
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Beds</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Dressers/Chests</a></li>
-                                    <li class="relative"><a href="#" class="tr_delay d_inline_b">Nightstands</a></li>
-                                </ul>
-                            </li>
+                            @endif
+                            @endforeach
+                            
                         </ul>
                     </section>
                     <figure class="relative wrapper scale_image_container m_bottom_40 r_image_container m_xs_bottom_30">
-                        <img src="{{ asset('web/images/banner_img_1.jpg') }}" alt="" class="tr_all scale_image">
+                        <img src="{{ asset('web/images/home/home5.jpg') }}" alt="" class="tr_all scale_image">
                         <!--caption-->
                         <figcaption class="caption_type_1 tr_all">
                             <div class="d_inline_b color_white fw_light caption_title tt_uppercase bg_lbrown_translucent">
-                                Special Offer
+                                Special Offers For You
                             </div>
                             <div class="caption_inner">
-                                <h3 class="color_white second_font fw_light m_bottom_5 w_break">Your Bedroom Lives Here. <a
-                                        href="#" class="color_lbrown color_white_hover second_font fw_light fs_ex_small">Buy
+                                <h3 class="color_white second_font fw_light m_bottom_5 w_break">Your Choice Lives Here. <a
+                                        href="#" class="color_lbrown color_white_hover second_font fw_light fs_ex_small">Contact
                                         Now!</a></h3>
                             </div>
                         </figcaption>
                     </figure>
                     <!--subscribe widget-->
-                    <section class="m_bottom_40 m_xs_bottom_30">
+                    <section class="m_bottom_40 m_xs_bottom_30 d-none">
                         <h5 class="color_dark tt_uppercase second_font fw_light m_bottom_13">Newsletter Sign Up</h5>
                         <hr class="divider_bg m_bottom_25">
                         <p class="second_font m_bottom_15">Get exclusive deals you will not find anywhere else straight to

@@ -40,7 +40,9 @@ class HomeController extends Controller
         session()->put('main_page', 'Indome Furnitures ');
         session()->put('sub_page', 'Contact Us');
 
-        return view('web/home/contact');
+        $categories = Category::with('sub_categories')->get();
+
+        return view('web/home/contact', compact('categories'));
     }
 
     public function contactStore(Request $request)
