@@ -3,6 +3,7 @@
 @section('content')
 
     <!--layerslider-->
+    
     <div class="layerslider" style="width:100%;height:550px;">
         <div class="ls-slide" data-ls="transition2d: all;">
             <!--slide image-->
@@ -11,15 +12,16 @@
             <img src="{{ asset('web/images/sliders/slide3.jpg') }}" alt="" class="ls-tn">
             <!--slide layers-->
             <p class="ls-l color_white fw_light tt_uppercase" style="left:0px;top:115px;font-size:1.285em;"
-                data-ls="offsetxin:-100;delayin:400;easingin:easeOutBack;durationin:700;">Shapes, Sizes And Styles</p>
+                data-ls="offsetxin:-100;delayin:400;easingin:easeOutBack;durationin:700;">Outdoor Living Collection</p>
             <h1 class="ls-l color_white second_font tt_uppercase fw_thin"
                 style="left:0px;top:156px;font-size:4.285em;line-height:.94em;"
-                data-ls="offsetxin:-100;delayin:600;easingin:easeOutBack;durationin:700;"><b>Kitchen</b> That<br>works
-                <b>perfectly</b><br><b>for you</b></h1>
-            <a href="#" class="ls-l d_block button_type_5 bg_transparent slider_button color_white tt_uppercase fw_light"
+                data-ls="offsetxin:-100;delayin:600;easingin:easeOutBack;durationin:700;"><b>Outdoor</b> Furniture<br>Made
+                <b>for</b><br><b>Living</b></h1>
+            <a href="{{ route('products') }}" class="ls-l d_block button_type_5 bg_transparent slider_button color_white tt_uppercase fw_light"
                 style="left:0px;font-size:1.428em;top:368px;"
-                data-ls="offsetxin:-100;delayin:700;easingin:easeOutBack;durationin:700;">Find It Here</a>
+                data-ls="offsetxin:-100;delayin:700;easingin:easeOutBack;durationin:700;">Explore Collection</a>
         </div>
+
         <div class="ls-slide" data-ls="transition2d: all;">
             <!--slide image-->
             <img src="{{ asset('web/images/sliders/slide4.jpg') }}" alt="" class="ls-bg">
@@ -30,21 +32,20 @@
                 style="left:207px; top:50px;"
                 data-ls="scalexin:0.5;offsetxin:0;delayin:200;easingin:easeOutBack;durationin:700;">
                 <div class="d_inline_m second_font" style="line-height:1.8em;">
-                    <div class="fs_large">for only</div>
-                    <b style="font-size:2.142em;">$299</b>
+                    <div class="fs_large">Outdoor</div>
+                    <b style="font-size:2.142em;">Sale</b>
                 </div>
             </div>
             <p class="ls-l color_white fw_light tt_uppercase" style="left:50%;top:143px;font-size:1.285em;"
-                data-ls="offsetxin:0; offsetyin:120;delayin:400;easingin:easeOutBack;durationin:700;">By Charles and Ray
-                Eames</p>
+                data-ls="offsetxin:0; offsetyin:120;delayin:400;easingin:easeOutBack;durationin:700;">Designed for Comfort</p>
             <h1 class="ls-l color_white second_font tt_uppercase t_align_c"
                 style="left:50%;top:185px;font-size:4.285em;line-height:.94em;"
-                data-ls="offsetxin:0; offsetyin:120;delayin:600;easingin:easeOutBack;durationin:700;"><b>Eames Molded
-                    Plastic<br>Side Chair</b></h1>
-            <a href="#" class="ls-l d_block button_type_5 bg_transparent slider_button color_white tt_uppercase fw_light"
+                data-ls="offsetxin:0; offsetyin:120;delayin:600;easingin:easeOutBack;durationin:700;"><b>Beautiful Outdoor<br>Furniture</b></h1>
+            <a href="{{ route('products') }}" class="ls-l d_block button_type_5 bg_transparent slider_button color_white tt_uppercase fw_light"
                 style="left:50%;font-size:1.428em;top:342px;"
-                data-ls="offsetxin:0; offsetyin:120;delayin:800;easingin:easeOutBack;durationin:700;">Buy Now!</a>
+                data-ls="offsetxin:0; offsetyin:120;delayin:800;easingin:easeOutBack;durationin:700;">Shop Now</a>
         </div>
+
         <div class="ls-slide" data-ls="transition2d: all;">
             <!--slide image-->
             <img src="{{ asset('web/images/sliders/slide2.jpg') }}" alt="" class="ls-bg">
@@ -52,17 +53,19 @@
             <img src="{{ asset('web/images/sliders/slide2.jpg') }}" alt="" class="ls-tn">
             <!--slide layers-->
             <p class="ls-l color_white fw_light tt_uppercase" style="left:50%;top:171px;font-size:1.285em;"
-                data-ls="offsetxin:0; offsetyin:120; delayin:400;easingin:easeOutBack;durationin:700;">BATHROOM INSPIRATION
+                data-ls="offsetxin:0; offsetyin:120; delayin:400;easingin:easeOutBack;durationin:700;">OUTDOOR FURNITURE SALE
             </p>
             <h1 class="ls-l color_white second_font tt_uppercase t_align_c"
                 style="left:50%;top:213px;font-size:4.285em;line-height:.94em;"
                 data-ls="offsetxin:0; offsetyin:0; rotatein:360;scalexin:0.5;scaleyin:0.5; delayin:800;easingin:easeOutBack;durationin:700;">
-                <b>New bathroom ideas</b></h1>
-            <a href="#" class="ls-l d_block button_type_5 bg_transparent slider_button color_white tt_uppercase fw_light"
+                <b>Refresh Your Outdoor Space</b></h1>
+            <a href="{{ route('products') }}" class="ls-l d_block button_type_5 bg_transparent slider_button color_white tt_uppercase fw_light"
                 style="left:50%;font-size:1.428em;top:315px;"
                 data-ls="offsetxin:0; offsetyin:120;delayin:1100;easingin:easeOutBack;durationin:700;">View Collection</a>
         </div>
     </div>
+
+
     <!--main content-->
     <section class="section_offset hidden animated" data-animation="fadeInDown">
         <div class="container">
